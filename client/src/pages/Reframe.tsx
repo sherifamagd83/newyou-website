@@ -8,6 +8,7 @@ export default function Reframe() {
       <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
         <div className="absolute inset-0"><div className="absolute top-0 left-0 w-[400px] h-[400px] bg-magenta/10 rounded-full blur-3xl" /></div>
         <div className="max-w-3xl mx-auto px-4 relative">
+          <img src="/images/site/reframe-logo.png" alt="REFRAME Coaching Program" className="h-16 w-auto mx-auto mb-6" />
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">REFRAME Coaching Program</h1>
           <p className="text-white/80 text-lg">Behavioral coaching that transforms your mindset — not just your body. Led by Lora Grabow, LMSW.</p>
         </div>
@@ -51,9 +52,11 @@ export default function Reframe() {
               {/* Lora bio */}
               <div className="bg-white rounded-2xl border shadow-sm p-6 mb-6">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-magenta/10 to-navy/10 flex items-center justify-center shrink-0">
-                    <Heart className="w-8 h-8 text-magenta/40" />
-                  </div>
+                  <img
+                    src="/images/team/lora-grabow.jpg"
+                    alt="Lora Grabow, LMSW"
+                    className="w-20 h-20 rounded-full object-cover shrink-0"
+                  />
                   <div>
                     <h3 className="font-semibold text-navy text-lg">Lora Grabow, LMSW</h3>
                     <p className="text-magenta text-sm font-medium">Behavioral Therapist & Coach</p>

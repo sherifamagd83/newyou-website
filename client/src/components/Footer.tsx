@@ -52,7 +52,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Column 1 — About */}
             <div>
-              <h3 className="font-serif text-xl font-bold mb-4">New <span className="text-magenta-light">You</span></h3>
+              <img src="/images/site/logo-white.png" alt="New You Surgical Weight Loss" className="h-8 w-auto mb-4" />
               <p className="text-white/70 text-sm leading-relaxed mb-4">
                 Missouri's premier bariatric surgery center led by {DOCTOR.name}, {DOCTOR.credentials}. Comprehensive surgical and non-surgical weight loss solutions.
               </p>

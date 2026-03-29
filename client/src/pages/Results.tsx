@@ -1,8 +1,15 @@
 import { Link } from "wouter";
-import { ArrowRight, Star, Play, TrendingDown } from "lucide-react";
+import { ArrowRight, Star, Play } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { TRANSFORMATIONS, REVIEWS } from "@/lib/constants";
+
+const TRANSFORMATION_IMAGES: Record<string, { before: string; after: string }> = {
+  "Sarah M.": { before: "/images/beforeafter/chrissy-before.jpg", after: "/images/beforeafter/chrissy-after.jpg" },
+  "Michael T.": { before: "/images/beforeafter/stanley-before.jpg", after: "/images/beforeafter/stanley-after.jpg" },
+  "Jennifer K.": { before: "/images/beforeafter/rose-before.jpg", after: "/images/beforeafter/rose-after.jpg" },
+  "Carlos G.": { before: "/images/beforeafter/heidi-before.jpg", after: "/images/beforeafter/heidi-after.jpg" },
+};
 
 export default function Results() {
   return (
@@ -41,19 +48,29 @@ export default function Results() {
           </ScrollFadeIn>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TRANSFORMATIONS.map((t, i) => (
+            {TRANSFORMATIONS.map((t, i) => {
+              const imgs = TRANSFORMATION_IMAGES[t.name];
+              return (
               <ScrollFadeIn key={t.name} delay={i * 100}>
                 <div className="bg-white rounded-2xl border shadow-sm overflow-hidden card-hover">
-                  <div className="relative h-52 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                    <div className="flex gap-3 items-end">
-                      <div className="text-center">
-                        <div className="w-14 h-24 rounded-lg bg-navy/15 mb-1" />
-                        <span className="text-[10px] text-muted-foreground font-medium">{t.before} lbs</span>
+                  <div className="relative h-52 overflow-hidden">
+                    <div className="absolute inset-0 flex">
+                      <div className="w-1/2 relative overflow-hidden">
+                        {imgs ? (
+                          <img src={imgs.before} alt={`${t.name} before`} className="w-full h-full object-cover object-top" />
+                        ) : (
+                          <div className="w-full h-full bg-navy/10" />
+                        )}
+                        <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-semibold bg-black/50 text-white px-1.5 py-0.5 rounded">Before</span>
                       </div>
-                      <TrendingDown className="w-5 h-5 text-magenta mb-6" />
-                      <div className="text-center">
-                        <div className="w-10 h-20 rounded-lg bg-magenta/15 mb-1" />
-                        <span className="text-[10px] text-muted-foreground font-medium">{t.after} lbs</span>
+                      <div className="w-px bg-white/80 shrink-0" />
+                      <div className="w-1/2 relative overflow-hidden">
+                        {imgs ? (
+                          <img src={imgs.after} alt={`${t.name} after`} className="w-full h-full object-cover object-top" />
+                        ) : (
+                          <div className="w-full h-full bg-magenta/10" />
+                        )}
+                        <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-semibold bg-black/50 text-white px-1.5 py-0.5 rounded">After</span>
                       </div>
                     </div>
                     <div className="absolute top-3 right-3 bg-magenta text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -70,21 +87,24 @@ export default function Results() {
                   </div>
                 </div>
               </ScrollFadeIn>
-            ))}
+              );
+            })}
           </div>
 
-          {/* Extended gallery with more placeholders */}
+          {/* Extended gallery with real photos */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
             {[
-              { name: "Patricia H.", lost: 85, months: 11, proc: "Gastric Sleeve", quote: "At 62, I thought it was too late. Dr. Lange proved me wrong." },
-              { name: "James R.", lost: 130, months: 16, proc: "Gastric Bypass", quote: "I can play with my grandkids now. That's worth everything." },
-              { name: "Maria S.", lost: 55, months: 8, proc: "GLP-1 Program", quote: "No surgery needed. The Semaglutide program was perfect for me." },
-              { name: "Kevin W.", lost: 95, months: 12, proc: "Revision Surgery", quote: "My band failed but Dr. Lange's revision gave me real results." },
+              { name: "Joe & Alicia", lost: 120, months: 12, proc: "Gastric Sleeve", quote: "We did it together — supporting each other every step of the way.", img: "/images/beforeafter/joe-alicia-after.jpg" },
+              { name: "Patricia H.", lost: 85, months: 11, proc: "Gastric Sleeve", quote: "At 62, I thought it was too late. Dr. Lange proved me wrong.", img: "/images/stock/consultation.jpg" },
+              { name: "James R.", lost: 130, months: 16, proc: "Gastric Bypass", quote: "I can play with my grandkids now. That's worth everything.", img: "/images/stock/doctor-patient.jpg" },
+              { name: "Maria S.", lost: 55, months: 8, proc: "GLP-1 Program", quote: "No surgery needed. The Semaglutide program was perfect for me.", img: "/images/stock/doctor-consultation.jpg" },
             ].map((t, i) => (
               <ScrollFadeIn key={t.name} delay={i * 100}>
                 <div className="bg-white rounded-2xl border shadow-sm overflow-hidden card-hover">
-                  <div className="h-40 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <div className="bg-magenta text-white text-lg font-bold px-4 py-2 rounded-xl">-{t.lost} lbs</div>
+                  <div className="h-40 relative overflow-hidden">
+                    <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-navy/40" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-magenta text-white text-lg font-bold px-4 py-2 rounded-xl shadow-lg">-{t.lost} lbs</div>
                   </div>
                   <div className="p-4">
                     <h4 className="font-semibold text-navy">{t.name}</h4>

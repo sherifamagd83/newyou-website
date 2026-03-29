@@ -74,17 +74,19 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* Map placeholder */}
-                <div className="aspect-[4/3] rounded-2xl bg-gray-100 border overflow-hidden flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-magenta/30 mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground font-medium">1000 Des Peres Rd, Suite 120</p>
-                    <p className="text-xs text-muted-foreground">St. Louis, MO 63131</p>
-                    <a href={PRACTICE.mapUrl} target="_blank" rel="noopener noreferrer"
-                      className="inline-block mt-3 text-magenta text-sm font-medium hover:underline" data-testid="link-map">
-                      Open in Google Maps →
-                    </a>
-                  </div>
+                {/* Google Maps embed */}
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden border shadow-sm">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.5!2d-90.44!3d38.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1000+Des+Peres+Rd+Suite+120+St+Louis+MO+63131!5e0!3m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="New You Surgical Weight Loss location map"
+                    data-testid="link-map"
+                  />
                 </div>
               </div>
             </ScrollFadeIn>

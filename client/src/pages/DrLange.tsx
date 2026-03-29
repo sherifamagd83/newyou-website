@@ -1,7 +1,14 @@
 import { Link } from "wouter";
-import { ArrowRight, Award, Building2, GraduationCap, Heart, Shield, Star, Users, BookOpen } from "lucide-react";
+import { ArrowRight, Award, Building2, GraduationCap, Heart, Shield, Star, BookOpen } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { DOCTOR, TEAM } from "@/lib/constants";
+
+const teamImages: Record<string, string> = {
+  "Dr. Matthew A. Lange, DO": "/images/team/dr-lange.jpg",
+  "Lora Grabow, LMSW": "/images/team/lora-grabow.jpg",
+  "Barb Warmbrodt": "/images/team/barb-warmbrodt.jpg",
+  "Kristina Mercer, CPC": "/images/team/kristina-mercer.jpg",
+};
 
 export default function DrLange() {
   return (
@@ -22,14 +29,12 @@ export default function DrLange() {
             <div className="lg:col-span-2">
               <ScrollFadeIn>
                 <div className="sticky top-24">
-                  <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-navy/10 via-gray-100 to-magenta/10 flex items-center justify-center overflow-hidden mb-6">
-                    <div className="text-center">
-                      <div className="w-40 h-40 rounded-full bg-navy/10 mx-auto mb-4 flex items-center justify-center">
-                        <Users className="w-20 h-20 text-navy/20" />
-                      </div>
-                      <p className="font-semibold text-navy">{DOCTOR.name}, {DOCTOR.credentials}</p>
-                      <p className="text-sm text-muted-foreground">{DOCTOR.title}</p>
-                    </div>
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden mb-6">
+                    <img
+                      src="/images/team/dr-lange.jpg"
+                      alt={`${DOCTOR.name}, ${DOCTOR.credentials}`}
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                   {/* Credentials badges */}
                   <div className="grid grid-cols-2 gap-3">
@@ -122,13 +127,15 @@ export default function DrLange() {
             <h2 className="font-serif text-3xl font-bold text-navy mb-4">Meet the Team</h2>
             <p className="text-muted-foreground">Your care is supported by a dedicated multidisciplinary team.</p>
           </ScrollFadeIn>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {TEAM.map((member, i) => (
               <ScrollFadeIn key={member.name} delay={i * 100}>
                 <div className="bg-white rounded-2xl border shadow-sm p-6 text-center card-hover">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-navy/10 to-magenta/10 mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-10 h-10 text-navy/30" />
-                  </div>
+                  <img
+                    src={teamImages[member.name]}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                  />
                   <h3 className="font-semibold text-navy text-lg">{member.name}</h3>
                   <p className="text-magenta text-sm font-medium mb-3">{member.role}</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>

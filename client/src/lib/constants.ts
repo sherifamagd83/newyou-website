@@ -46,6 +46,11 @@ export const TEAM = [
     role: "Practice Manager",
     bio: "Dedicated practice manager ensuring every patient receives an exceptional, seamless experience from first consultation through lifelong follow-up care.",
   },
+  {
+    name: "Kristina Mercer, CPC",
+    role: "Insurance Specialist",
+    bio: "Certified professional coder who ensures every patient gets maximum insurance coverage. Kristina handles pre-authorizations and works directly with insurance companies to simplify the approval process.",
+  },
 ];
 
 export const PROCEDURES = [

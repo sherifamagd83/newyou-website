@@ -24,8 +24,14 @@ export default function Home() {
 function HeroSection() {
   return (
     <section className="hero-gradient relative overflow-hidden">
-      {/* Decorative elements */}
+      {/* Hero background photo — right side */}
       <div className="absolute inset-0">
+        <img
+          src="/images/stock/hero-woman-walking.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute right-0 top-0 h-full w-1/2 object-cover object-center opacity-20 mix-blend-luminosity"
+        />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-magenta/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
       </div>
@@ -184,6 +190,13 @@ function ProceduresGrid() {
   );
 }
 
+const TRANSFORMATION_IMAGES: Record<string, { before: string; after: string }> = {
+  "Sarah M.": { before: "/images/beforeafter/chrissy-before.jpg", after: "/images/beforeafter/chrissy-after.jpg" },
+  "Michael T.": { before: "/images/beforeafter/stanley-before.jpg", after: "/images/beforeafter/stanley-after.jpg" },
+  "Jennifer K.": { before: "/images/beforeafter/rose-before.jpg", after: "/images/beforeafter/rose-after.jpg" },
+  "Carlos G.": { before: "/images/beforeafter/heidi-before.jpg", after: "/images/beforeafter/heidi-after.jpg" },
+};
+
 function TransformationsSection() {
   return (
     <section className="py-20 md:py-28 bg-white">
@@ -196,21 +209,34 @@ function TransformationsSection() {
         </ScrollFadeIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {TRANSFORMATIONS.map((t, i) => (
+          {TRANSFORMATIONS.map((t, i) => {
+            const imgs = TRANSFORMATION_IMAGES[t.name];
+            return (
             <ScrollFadeIn key={t.name} delay={i * 100}>
               <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover">
-                {/* Before/After visual placeholder */}
-                <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="flex gap-4 items-end">
-                    <div className="text-center">
-                      <div className="w-16 h-24 rounded-lg bg-navy/20 mb-1" />
-                      <span className="text-xs text-muted-foreground font-medium">Before</span>
+                {/* Before/After real images */}
+                <div className="relative h-48 overflow-hidden">
+                  <div className="absolute inset-0 flex">
+                    <div className="w-1/2 relative overflow-hidden">
+                      {imgs ? (
+                        <img src={imgs.before} alt={`${t.name} before`} className="w-full h-full object-cover object-top" />
+                      ) : (
+                        <div className="w-full h-full bg-navy/10" />
+                      )}
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-semibold bg-black/50 text-white px-1.5 py-0.5 rounded">Before</span>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-magenta mb-6" />
-                    <div className="text-center">
-                      <div className="w-12 h-20 rounded-lg bg-magenta/20 mb-1" />
-                      <span className="text-xs text-muted-foreground font-medium">After</span>
+                    <div className="w-px bg-white/80 shrink-0" />
+                    <div className="w-1/2 relative overflow-hidden">
+                      {imgs ? (
+                        <img src={imgs.after} alt={`${t.name} after`} className="w-full h-full object-cover object-top" />
+                      ) : (
+                        <div className="w-full h-full bg-magenta/10" />
+                      )}
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[10px] font-semibold bg-black/50 text-white px-1.5 py-0.5 rounded">After</span>
                     </div>
+                  </div>
+                  <div className="absolute top-2 right-2 bg-magenta text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                    -{t.before - t.after} lbs
                   </div>
                 </div>
                 <div className="p-5">
@@ -226,7 +252,8 @@ function TransformationsSection() {
                 </div>
               </div>
             </ScrollFadeIn>
-          ))}
+            );
+          })}
         </div>
 
         <ScrollFadeIn className="text-center mt-10">
@@ -338,15 +365,14 @@ function DrLangeSpotlight() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollFadeIn>
-            {/* Photo placeholder */}
+            {/* Dr. Lange photo */}
             <div className="relative">
-              <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl bg-gradient-to-br from-navy/10 via-gray-100 to-magenta/10 flex items-center justify-center overflow-hidden">
-                <div className="text-center">
-                  <div className="w-32 h-32 rounded-full bg-navy/10 mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-16 h-16 text-navy/30" />
-                  </div>
-                  <p className="text-sm text-muted-foreground font-medium">{DOCTOR.name}, {DOCTOR.credentials}</p>
-                </div>
+              <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden">
+                <img
+                  src="/images/team/dr-lange.jpg"
+                  alt={`${DOCTOR.name}, ${DOCTOR.credentials}`}
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-lg border">
                 <div className="flex items-center gap-2">

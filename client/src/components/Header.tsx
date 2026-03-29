@@ -47,7 +47,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 lg:h-[72px]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0" data-testid="link-logo">
-            <NewYouLogo />
+            <img src="/images/site/logo-color.png" alt="New You Surgical Weight Loss" className="h-9 w-auto" />
           </Link>
 
           {/* Desktop nav */}
@@ -131,31 +131,4 @@ export default function Header() {
   );
 }
 
-function NewYouLogo() {
-  return (
-    <svg viewBox="0 0 220 44" width="180" height="36" aria-label="New You Surgical Weight Loss" className="shrink-0">
-      <defs>
-        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#9B2D6B" />
-          <stop offset="100%" stopColor="#1B2A4A" />
-        </linearGradient>
-      </defs>
-      {/* Butterfly/transformation mark */}
-      <g transform="translate(2, 4)">
-        <path d="M18 18C14 10 4 6 2 14C0 22 10 26 18 18Z" fill="#9B2D6B" opacity="0.9"/>
-        <path d="M18 18C22 10 32 6 34 14C36 22 26 26 18 18Z" fill="#1B2A4A" opacity="0.9"/>
-        <circle cx="18" cy="18" r="2" fill="#C8973E"/>
-        <line x1="18" y1="14" x2="18" y2="4" stroke="#C8973E" strokeWidth="1.5" strokeLinecap="round"/>
-        <line x1="16" y1="5" x2="18" y2="4" stroke="#C8973E" strokeWidth="1.5" strokeLinecap="round"/>
-        <line x1="20" y1="5" x2="18" y2="4" stroke="#C8973E" strokeWidth="1.5" strokeLinecap="round"/>
-      </g>
-      {/* Text */}
-      <text x="44" y="22" fontFamily="Cormorant Garamond, Georgia, serif" fontSize="22" fontWeight="700" fill="#1B2A4A">
-        <tspan>New </tspan><tspan fill="#9B2D6B">You</tspan>
-      </text>
-      <text x="44" y="38" fontFamily="Outfit, sans-serif" fontSize="8.5" fontWeight="500" fill="#1B2A4A" letterSpacing="1.8">
-        SURGICAL WEIGHT LOSS
-      </text>
-    </svg>
-  );
-}
+
