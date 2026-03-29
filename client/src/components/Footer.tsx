@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Shield, Award, Building2, Heart } from "lucide-react";
 import { PRACTICE, DOCTOR } from "@/lib/constants";
+import { img } from "@/lib/img";
 
 export default function Footer() {
   return (
@@ -52,7 +53,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Column 1 — About */}
             <div>
-              <img src="/images/site/logo-white.png" alt="New You Surgical Weight Loss" className="h-8 w-auto mb-4" />
+              <img src={img("/images/site/logo-white.png")} alt="New You Surgical Weight Loss" className="h-8 w-auto mb-4" />
               <p className="text-white/70 text-sm leading-relaxed mb-4">
                 Missouri's premier bariatric surgery center led by {DOCTOR.name}, {DOCTOR.credentials}. Comprehensive surgical and non-surgical weight loss solutions.
               </p>

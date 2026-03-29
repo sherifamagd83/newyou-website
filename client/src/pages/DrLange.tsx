@@ -2,12 +2,13 @@ import { Link } from "wouter";
 import { ArrowRight, Award, Building2, GraduationCap, Heart, Shield, Star, BookOpen } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { DOCTOR, TEAM } from "@/lib/constants";
+import { img } from "@/lib/img";
 
 const teamImages: Record<string, string> = {
-  "Dr. Matthew A. Lange, DO": "/images/team/dr-lange.jpg",
-  "Lora Grabow, LMSW": "/images/team/lora-grabow.jpg",
-  "Barb Warmbrodt": "/images/team/barb-warmbrodt.jpg",
-  "Kristina Mercer, CPC": "/images/team/kristina-mercer.jpg",
+  "Dr. Matthew A. Lange, DO": img("/images/team/dr-lange.jpg"),
+  "Lora Grabow, LMSW": img("/images/team/lora-grabow.jpg"),
+  "Barb Warmbrodt": img("/images/team/barb-warmbrodt.jpg"),
+  "Kristina Mercer, CPC": img("/images/team/kristina-mercer.jpg"),
 };
 
 export default function DrLange() {
@@ -31,7 +32,7 @@ export default function DrLange() {
                 <div className="sticky top-24">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden mb-6">
                     <img
-                      src="/images/team/dr-lange.jpg"
+                      src={img("/images/team/dr-lange.jpg")}
                       alt={`${DOCTOR.name}, ${DOCTOR.credentials}`}
                       className="w-full h-full object-cover rounded-2xl"
                     />

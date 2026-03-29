@@ -5,6 +5,7 @@ import ScrollFadeIn from "@/components/ScrollFadeIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import LeadForm from "@/components/LeadForm";
 import { PRACTICE, DOCTOR, REVIEWS, TRANSFORMATIONS } from "@/lib/constants";
+import { img } from "@/lib/img";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ function HeroSection() {
       {/* Hero background photo — right side */}
       <div className="absolute inset-0">
         <img
-          src="/images/stock/hero-woman-walking.jpg"
+          src={img("/images/stock/hero-woman-walking.jpg")}
           alt=""
           aria-hidden="true"
           className="absolute right-0 top-0 h-full w-1/2 object-cover object-center opacity-20 mix-blend-luminosity"
@@ -191,10 +192,10 @@ function ProceduresGrid() {
 }
 
 const TRANSFORMATION_IMAGES: Record<string, { before: string; after: string }> = {
-  "Sarah M.": { before: "/images/beforeafter/chrissy-before.jpg", after: "/images/beforeafter/chrissy-after.jpg" },
-  "Michael T.": { before: "/images/beforeafter/stanley-before.jpg", after: "/images/beforeafter/stanley-after.jpg" },
-  "Jennifer K.": { before: "/images/beforeafter/rose-before.jpg", after: "/images/beforeafter/rose-after.jpg" },
-  "Carlos G.": { before: "/images/beforeafter/heidi-before.jpg", after: "/images/beforeafter/heidi-after.jpg" },
+  "Sarah M.": { before: img("/images/beforeafter/chrissy-before.jpg"), after: img("/images/beforeafter/chrissy-after.jpg") },
+  "Michael T.": { before: img("/images/beforeafter/stanley-before.jpg"), after: img("/images/beforeafter/stanley-after.jpg") },
+  "Jennifer K.": { before: img("/images/beforeafter/rose-before.jpg"), after: img("/images/beforeafter/rose-after.jpg") },
+  "Carlos G.": { before: img("/images/beforeafter/heidi-before.jpg"), after: img("/images/beforeafter/heidi-after.jpg") },
 };
 
 function TransformationsSection() {
@@ -369,7 +370,7 @@ function DrLangeSpotlight() {
             <div className="relative">
               <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden">
                 <img
-                  src="/images/team/dr-lange.jpg"
+                  src={img("/images/team/dr-lange.jpg")}
                   alt={`${DOCTOR.name}, ${DOCTOR.credentials}`}
                   className="w-full h-full object-cover rounded-2xl"
                 />

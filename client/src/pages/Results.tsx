@@ -3,12 +3,13 @@ import { ArrowRight, Star, Play } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { TRANSFORMATIONS, REVIEWS } from "@/lib/constants";
+import { img } from "@/lib/img";
 
 const TRANSFORMATION_IMAGES: Record<string, { before: string; after: string }> = {
-  "Sarah M.": { before: "/images/beforeafter/chrissy-before.jpg", after: "/images/beforeafter/chrissy-after.jpg" },
-  "Michael T.": { before: "/images/beforeafter/stanley-before.jpg", after: "/images/beforeafter/stanley-after.jpg" },
-  "Jennifer K.": { before: "/images/beforeafter/rose-before.jpg", after: "/images/beforeafter/rose-after.jpg" },
-  "Carlos G.": { before: "/images/beforeafter/heidi-before.jpg", after: "/images/beforeafter/heidi-after.jpg" },
+  "Sarah M.": { before: img("/images/beforeafter/chrissy-before.jpg"), after: img("/images/beforeafter/chrissy-after.jpg") },
+  "Michael T.": { before: img("/images/beforeafter/stanley-before.jpg"), after: img("/images/beforeafter/stanley-after.jpg") },
+  "Jennifer K.": { before: img("/images/beforeafter/rose-before.jpg"), after: img("/images/beforeafter/rose-after.jpg") },
+  "Carlos G.": { before: img("/images/beforeafter/heidi-before.jpg"), after: img("/images/beforeafter/heidi-after.jpg") },
 };
 
 export default function Results() {
@@ -94,10 +95,10 @@ export default function Results() {
           {/* Extended gallery with real photos */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
             {[
-              { name: "Joe & Alicia", lost: 120, months: 12, proc: "Gastric Sleeve", quote: "We did it together — supporting each other every step of the way.", img: "/images/beforeafter/joe-alicia-after.jpg" },
-              { name: "Patricia H.", lost: 85, months: 11, proc: "Gastric Sleeve", quote: "At 62, I thought it was too late. Dr. Lange proved me wrong.", img: "/images/stock/consultation.jpg" },
-              { name: "James R.", lost: 130, months: 16, proc: "Gastric Bypass", quote: "I can play with my grandkids now. That's worth everything.", img: "/images/stock/doctor-patient.jpg" },
-              { name: "Maria S.", lost: 55, months: 8, proc: "GLP-1 Program", quote: "No surgery needed. The Semaglutide program was perfect for me.", img: "/images/stock/doctor-consultation.jpg" },
+              { name: "Joe & Alicia", lost: 120, months: 12, proc: "Gastric Sleeve", quote: "We did it together — supporting each other every step of the way.", img: img("/images/beforeafter/joe-alicia-after.jpg") },
+              { name: "Patricia H.", lost: 85, months: 11, proc: "Gastric Sleeve", quote: "At 62, I thought it was too late. Dr. Lange proved me wrong.", img: img("/images/stock/consultation.jpg") },
+              { name: "James R.", lost: 130, months: 16, proc: "Gastric Bypass", quote: "I can play with my grandkids now. That's worth everything.", img: img("/images/stock/doctor-patient.jpg") },
+              { name: "Maria S.", lost: 55, months: 8, proc: "GLP-1 Program", quote: "No surgery needed. The Semaglutide program was perfect for me.", img: img("/images/stock/doctor-consultation.jpg") },
             ].map((t, i) => (
               <ScrollFadeIn key={t.name} delay={i * 100}>
                 <div className="bg-white rounded-2xl border shadow-sm overflow-hidden card-hover">
