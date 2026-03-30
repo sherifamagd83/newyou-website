@@ -26,110 +26,93 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="hero-gradient-animated relative overflow-hidden">
-      {/* Ambient floating shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-[10%] right-[15%] w-[300px] h-[300px] rounded-full bg-magenta/8 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-[5%] left-[5%] w-[250px] h-[250px] rounded-full bg-teal/8 blur-3xl animate-float-reverse" />
-        <div className="absolute top-[50%] right-[40%] w-[180px] h-[180px] rounded-full bg-gold/6 blur-3xl animate-float" />
-        {/* Geometric accents */}
-        <div className="absolute top-20 left-[10%] w-2 h-2 rounded-full bg-gold/40 animate-float" />
-        <div className="absolute top-32 left-[25%] w-1.5 h-1.5 rounded-full bg-magenta/30 animate-float-slow" />
-        <div className="absolute bottom-24 right-[20%] w-2.5 h-2.5 rounded-full bg-teal/30 animate-float-reverse" />
-      </div>
-
-      {/* Dr. Lange photo — visible as large background element on right */}
-      <div className="absolute right-0 top-0 bottom-0 w-[45%] hidden lg:block" aria-hidden="true">
+    <section className="relative overflow-hidden min-h-[80vh] lg:min-h-[75vh] flex items-center">
+      {/* Full-bleed cinematic hero image */}
+      <div className="absolute inset-0" aria-hidden="true">
         <img
-          src={img("/images/team/dr-lange-formal.jpg")}
+          src={img("/images/hero/hero-bg.jpg")}
           alt=""
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "50% 25%" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1B2A4A] via-[#1B2A4A]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A4A]/60 to-transparent" />
+        {/* Multi-layer overlay for depth and text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/95 via-[#0B1829]/80 to-[#0B1829]/40 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/90 via-transparent to-[#0B1829]/30" />
+        {/* Subtle warm color wash to tie the image to the brand */}
+        <div className="absolute inset-0 bg-gradient-to-br from-magenta/10 via-transparent to-gold/5" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-16 md:py-20 lg:py-24 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      {/* Ambient glow accents */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="absolute top-[15%] left-[5%] w-[200px] h-[200px] rounded-full bg-magenta/8 blur-[100px] animate-float-slow" />
+        <div className="absolute bottom-[10%] left-[20%] w-[150px] h-[150px] rounded-full bg-gold/6 blur-[80px] animate-float" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 lg:py-20 relative z-10 w-full">
+        <div className="grid lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 items-center">
           {/* Left — Copy */}
           <div>
-            <div className="animate-text-reveal inline-flex items-center gap-2 bg-white/10 backdrop-blur rounded-full px-4 py-1.5 text-sm text-white/80 mb-6 border border-white/5">
+            <div className="animate-text-reveal inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm text-white/90 mb-6 border border-white/10">
               <Shield className="w-4 h-4 text-gold" />
-              Board-Certified Bariatric Surgeon — St. Louis, MO
+              Board-Certified Bariatric Surgeon
             </div>
-            <h1 className="animate-text-reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.08] mb-6">
-              Transform Your{" "}
-              <br className="hidden md:block" />
-              Life at{" "}
+
+            <h1 className="animate-text-reveal-delay-1 font-serif text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-white leading-[1.08] mb-6 tracking-tight">
+              Your New Life{" "}
+              <br className="hidden sm:block" />
+              Starts at{" "}
               <span
                 className="text-transparent bg-clip-text"
                 style={{
-                  backgroundImage: "linear-gradient(135deg, #e8a0c9, #d466a8, #C8973E)",
+                  backgroundImage: "linear-gradient(135deg, #f0b4d4, #d466a8, #C8973E)",
                   WebkitBackgroundClip: "text",
                 }}
               >
                 New You
               </span>
             </h1>
-            <p className="animate-text-reveal-delay-2 text-lg md:text-xl text-white/75 mb-8 leading-relaxed max-w-xl">
-              {DOCTOR.name}, {DOCTOR.credentials} — fellowship-trained at Cleveland Clinic — offers comprehensive surgical and non-surgical weight loss solutions with a caring, personalized approach.
+
+            <p className="animate-text-reveal-delay-2 text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-lg">
+              Comprehensive surgical and non-surgical weight loss with {DOCTOR.name}, {DOCTOR.credentials}, fellowship-trained at Cleveland Clinic.
             </p>
 
-            {/* Dr. Lange inline card — desktop */}
-            <div className="animate-text-reveal-delay-2 hidden lg:flex items-center gap-4 mb-8 bg-white/8 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/10 max-w-sm">
-              <div className="w-14 h-14 rounded-xl overflow-hidden ring-2 ring-white/20 shrink-0">
+            {/* Dr. Lange card */}
+            <div className="animate-text-reveal-delay-2 flex items-center gap-4 mb-8 bg-white/[0.07] backdrop-blur-md rounded-2xl px-5 py-4 border border-white/10 max-w-md">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-gold/30 shrink-0 shadow-lg">
                 <img
                   src={img("/images/team/dr-lange-formal.jpg")}
                   alt={DOCTOR.name}
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div>
-                <div className="text-white font-semibold text-sm">{DOCTOR.name}, {DOCTOR.credentials}</div>
-                <div className="text-white/60 text-xs mb-1">Fellowship — Cleveland Clinic</div>
+              <div className="min-w-0">
+                <div className="text-white font-semibold">{DOCTOR.name}, {DOCTOR.credentials}</div>
+                <div className="text-white/50 text-sm mb-1">Fellowship, Cleveland Clinic</div>
                 <div className="flex items-center gap-1">
-                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-3 h-3 fill-yellow-500 text-yellow-500" />)}
-                  <span className="text-white/50 text-xs ml-1">5.0 · 500+ procedures</span>
+                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />)}
+                  <span className="text-white/40 text-xs ml-1.5">5.0 rating · 500+ procedures</span>
                 </div>
               </div>
             </div>
 
-            <div className="animate-text-reveal-delay-3 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/60">
+            {/* Trust badges */}
+            <div className="animate-text-reveal-delay-3 flex flex-wrap gap-x-5 gap-y-3">
               {[
                 { icon: Award, text: "14+ Years Experience" },
                 { icon: HeartPulse, text: "All Insurance Accepted" },
                 { icon: Users, text: "500+ Lives Transformed" },
               ].map(({ icon: Icon, text }) => (
-                <div key={text} className="flex items-center gap-2">
+                <div key={text} className="flex items-center gap-2 bg-white/[0.05] backdrop-blur-sm rounded-full px-3.5 py-1.5 border border-white/[0.06]">
                   <Icon className="w-4 h-4 text-gold" />
-                  <span>{text}</span>
+                  <span className="text-white/70 text-sm font-medium">{text}</span>
                 </div>
               ))}
-            </div>
-
-            {/* Mobile-only: Dr. Lange photo below text */}
-            <div className="lg:hidden mt-8 flex items-center gap-4 animate-text-reveal-delay-3">
-              <div className="w-16 h-16 rounded-xl overflow-hidden ring-2 ring-white/20 shrink-0">
-                <img
-                  src={img("/images/team/dr-lange-formal.jpg")}
-                  alt={DOCTOR.name}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div>
-                <div className="text-white font-semibold text-sm">{DOCTOR.name}, {DOCTOR.credentials}</div>
-                <div className="text-white/60 text-xs">Fellowship — Cleveland Clinic</div>
-                <div className="flex items-center gap-1 mt-1">
-                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-3 h-3 fill-yellow-500 text-yellow-500" />)}
-                  <span className="text-white/50 text-xs ml-1">5.0</span>
-                </div>
-              </div>
             </div>
           </div>
 
           {/* Right — Lead Form */}
-          <div className="lg:pl-8 animate-text-reveal-delay-4 relative z-20">
-            <div className="glass-card rounded-2xl p-6 md:p-8 animate-border-glow">
+          <div className="animate-text-reveal-delay-4 relative z-20">
+            <div className="bg-[#0B1829]/80 backdrop-blur-xl rounded-3xl p-7 md:p-8 border border-white/[0.12] shadow-2xl shadow-black/40">
               <h3 className="text-xl font-bold text-white mb-1">See If You Qualify</h3>
               <p className="text-white/50 text-sm mb-5">Free, no-obligation assessment</p>
               <LeadForm variant="hero" className="!bg-transparent !backdrop-blur-none !border-0 !p-0 !shadow-none" />
@@ -137,6 +120,9 @@ function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Bottom fade to white page content */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10" />
     </section>
   );
 }
