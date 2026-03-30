@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Calculator, CheckCircle2, ArrowRight, Clock, Stethoscope, FileCheck, HeartPulse, Scale, CalendarCheck } from "lucide-react";
+import { Calculator, CheckCircle2, ArrowRight, Clock, Stethoscope, FileCheck, HeartPulse, Scale, CalendarCheck, TrendingDown } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 export default function StartHere() {
@@ -45,69 +45,94 @@ function BMICalculator() {
   };
 
   const getCategory = (bmi: number) => {
-    if (bmi < 18.5) return { label: "Underweight", color: "text-blue-500", bg: "bg-blue-50" };
-    if (bmi < 25) return { label: "Normal", color: "text-green-500", bg: "bg-green-50" };
-    if (bmi < 30) return { label: "Overweight", color: "text-yellow-600", bg: "bg-yellow-50" };
-    if (bmi < 35) return { label: "Obese (Class I)", color: "text-orange-500", bg: "bg-orange-50" };
-    if (bmi < 40) return { label: "Obese (Class II)", color: "text-red-500", bg: "bg-red-50" };
-    return { label: "Obese (Class III)", color: "text-red-700", bg: "bg-red-50" };
+    if (bmi < 18.5) return { label: "Underweight", color: "text-blue-500", bg: "bg-blue-50", barColor: "bg-blue-400", pct: 15 };
+    if (bmi < 25) return { label: "Normal", color: "text-green-600", bg: "bg-green-50", barColor: "bg-green-500", pct: 35 };
+    if (bmi < 30) return { label: "Overweight", color: "text-yellow-600", bg: "bg-yellow-50", barColor: "bg-yellow-500", pct: 55 };
+    if (bmi < 35) return { label: "Obese (Class I)", color: "text-orange-500", bg: "bg-orange-50", barColor: "bg-orange-500", pct: 70 };
+    if (bmi < 40) return { label: "Obese (Class II)", color: "text-red-500", bg: "bg-red-50", barColor: "bg-red-500", pct: 85 };
+    return { label: "Obese (Class III)", color: "text-red-700", bg: "bg-red-100", barColor: "bg-red-600", pct: 95 };
   };
 
-  const getRecommendation = (bmi: number) => {
-    if (bmi >= 40) return "You may qualify for bariatric surgery. BMI ≥ 40 meets standard surgical criteria.";
-    if (bmi >= 35) return "With qualifying comorbidities (diabetes, hypertension, sleep apnea), you may qualify for bariatric surgery.";
-    if (bmi >= 30) return "You may be a candidate for our GLP-1/Semaglutide program, ORBERA® balloon, or medically supervised weight loss.";
-    return "Based on your BMI, you may not qualify for surgical weight loss. Our non-surgical programs may be an option.";
+  const getQualification = (bmi: number) => {
+    if (bmi >= 40) return { qualifies: true, text: "You likely qualify for bariatric surgery. BMI ≥ 40 meets standard surgical criteria." };
+    if (bmi >= 35) return { qualifies: true, text: "With qualifying comorbidities (diabetes, hypertension, sleep apnea), you may qualify for bariatric surgery." };
+    if (bmi >= 30) return { qualifies: true, text: "You may be a candidate for our GLP-1/Semaglutide program, ORBERA® balloon, or medically supervised weight loss." };
+    return { qualifies: false, text: "Based on your BMI, surgical weight loss is typically not indicated. Our non-surgical programs may be an option." };
   };
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <span className="text-magenta font-semibold text-sm tracking-wider uppercase">Step 1</span>
+          <div className="inline-flex items-center gap-2 bg-magenta/10 text-magenta font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
+            <Calculator className="w-4 h-4" />
+            Step 1
+          </div>
           <h2 className="font-serif text-3xl font-bold text-navy mt-2 mb-4">Calculate Your BMI</h2>
           <p className="text-muted-foreground">Body Mass Index (BMI) is the first step in determining if you qualify for weight loss surgery.</p>
         </ScrollFadeIn>
 
         <ScrollFadeIn>
-          <div className="bg-white rounded-2xl border shadow-sm p-8">
-            <div className="grid sm:grid-cols-3 gap-6 mb-6">
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-8 md:p-10">
+            <div className="grid sm:grid-cols-4 gap-5 mb-6">
               <div>
-                <label className="block text-sm font-medium mb-2">Height (feet)</label>
+                <label className="block text-sm font-medium text-navy mb-2">Height (feet)</label>
                 <input type="number" min="3" max="8" placeholder="5" value={height.feet} onChange={(e) => setHeight({ ...height, feet: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border bg-gray-50 outline-none focus:ring-2 focus:ring-magenta/20 focus:border-magenta transition-all" data-testid="input-bmi-feet" />
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 outline-none focus:ring-2 focus:ring-magenta/20 focus:border-magenta transition-all text-center text-lg font-semibold" data-testid="input-bmi-feet" />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Height (inches)</label>
+                <label className="block text-sm font-medium text-navy mb-2">Height (inches)</label>
                 <input type="number" min="0" max="11" placeholder="6" value={height.inches} onChange={(e) => setHeight({ ...height, inches: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl border bg-gray-50 outline-none focus:ring-2 focus:ring-magenta/20 focus:border-magenta transition-all" data-testid="input-bmi-inches" />
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 outline-none focus:ring-2 focus:ring-magenta/20 focus:border-magenta transition-all text-center text-lg font-semibold" data-testid="input-bmi-inches" />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Weight (lbs)</label>
+                <label className="block text-sm font-medium text-navy mb-2">Weight (lbs)</label>
                 <input type="number" min="50" max="800" placeholder="220" value={weight} onChange={(e) => setWeight(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border bg-gray-50 outline-none focus:ring-2 focus:ring-magenta/20 focus:border-magenta transition-all" data-testid="input-bmi-weight" />
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 outline-none focus:ring-2 focus:ring-magenta/20 focus:border-magenta transition-all text-center text-lg font-semibold" data-testid="input-bmi-weight" />
+              </div>
+              <div className="flex items-end">
+                <button onClick={calculateBMI}
+                  className="w-full bg-magenta hover:bg-magenta-light text-white font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-md"
+                  data-testid="button-calculate-bmi">
+                  <TrendingDown className="w-5 h-5" /> Calculate
+                </button>
               </div>
             </div>
-            <button onClick={calculateBMI}
-              className="w-full bg-magenta hover:bg-magenta-light text-white font-semibold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2"
-              data-testid="button-calculate-bmi">
-              <Calculator className="w-5 h-5" /> Calculate My BMI
-            </button>
 
-            {bmi !== null && (
-              <div className="mt-8 text-center animate-fade-in-up">
-                <div className={`inline-block px-8 py-6 rounded-2xl ${getCategory(bmi).bg}`}>
-                  <div className="text-5xl font-serif font-bold text-navy mb-1">{bmi}</div>
-                  <div className={`font-semibold ${getCategory(bmi).color}`}>{getCategory(bmi).label}</div>
+            {bmi !== null && (() => {
+              const cat = getCategory(bmi);
+              const qual = getQualification(bmi);
+              return (
+                <div className="animate-bmi-reveal mt-8 pt-8 border-t border-gray-100">
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="text-center md:text-left">
+                      <div className="inline-block">
+                        <div className="text-6xl font-serif font-bold text-navy mb-1">{bmi}</div>
+                        <div className={`text-lg font-semibold ${cat.color}`}>{cat.label}</div>
+                      </div>
+                      <div className="mt-5 w-full max-w-sm mx-auto md:mx-0">
+                        <div className="h-3 rounded-full bg-gray-100 overflow-hidden relative">
+                          <div className={`h-full rounded-full ${cat.barColor} animate-fill`} style={{ width: `${cat.pct}%` }} />
+                        </div>
+                        <div className="flex justify-between text-[10px] text-muted-foreground mt-1.5 px-0.5">
+                          <span>18.5</span><span>25</span><span>30</span><span>35</span><span>40+</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className={`rounded-xl p-5 ${qual.qualifies ? "bg-green-50 border border-green-100" : "bg-gray-50 border border-gray-100"}`}>
+                        <p className="text-foreground text-sm leading-relaxed mb-4">{qual.text}</p>
+                        <Link href="/request-consultation"
+                          className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all text-sm shadow-md"
+                          data-testid="link-bmi-consultation">
+                          Schedule Free Assessment <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p className="mt-4 text-foreground max-w-lg mx-auto">{getRecommendation(bmi)}</p>
-                <Link href="/request-consultation"
-                  className="inline-flex items-center gap-2 mt-6 bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-3 rounded-full transition-all"
-                  data-testid="link-bmi-consultation">
-                  Get a Free Consultation <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            )}
+              );
+            })()}
           </div>
         </ScrollFadeIn>
       </div>

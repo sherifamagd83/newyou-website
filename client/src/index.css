@@ -315,3 +315,180 @@
   from { opacity: 0; transform: scale(0.5); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* ============================================
+   PREMIUM VISUAL OVERHAUL — Animations & Effects
+   ============================================ */
+
+/* Hero gradient animation — slow shifting background */
+@keyframes heroGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-gradient-animated {
+  background: linear-gradient(135deg, #1B2A4A 0%, #162240 25%, #1a1e3a 50%, #2d1f45 75%, #1B2A4A 100%);
+  background-size: 200% 200%;
+  animation: heroGradientShift 12s ease-in-out infinite;
+}
+
+/* Floating shapes for hero ambient motion */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(2deg); }
+  66% { transform: translateY(8px) rotate(-1deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(15px) rotate(-2deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+/* Pulse ring animation for play buttons */
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Shimmer effect for premium elements */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(20, 33, 60, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(27, 42, 74, 0.08), 0 1px 3px rgba(27, 42, 74, 0.04);
+}
+
+/* Premium card hover effect */
+.premium-card {
+  @apply transition-all duration-300;
+  box-shadow: 0 2px 8px rgba(27, 42, 74, 0.06);
+}
+.premium-card:hover {
+  @apply -translate-y-1.5;
+  box-shadow: 0 16px 48px rgba(27, 42, 74, 0.12), 0 4px 12px rgba(155, 45, 107, 0.06);
+  border-color: rgba(155, 45, 107, 0.15);
+}
+
+/* Stats section pattern background */
+.stats-pattern {
+  background-color: var(--navy);
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(155, 45, 107, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(26, 143, 158, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 0%, rgba(200, 151, 62, 0.08) 0%, transparent 50%);
+}
+
+/* BMI gauge animation */
+@keyframes bmiReveal {
+  from { opacity: 0; transform: scale(0.9) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-bmi-reveal {
+  animation: bmiReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Text reveal animation for hero */
+@keyframes textReveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-text-reveal {
+  animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-text-reveal-delay-1 {
+  opacity: 0;
+  animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.animate-text-reveal-delay-2 {
+  opacity: 0;
+  animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.animate-text-reveal-delay-3 {
+  opacity: 0;
+  animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+}
+
+.animate-text-reveal-delay-4 {
+  opacity: 0;
+  animation: textReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+/* Video thumbnail hover */
+.video-thumbnail {
+  @apply transition-all duration-300;
+}
+.video-thumbnail:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 48px rgba(27, 42, 74, 0.15);
+}
+.video-thumbnail:hover .play-btn {
+  transform: scale(1.15);
+}
+
+/* BMI progress bar fill animation */
+@keyframes fillBar {
+  from { width: 0%; }
+}
+
+.animate-fill {
+  animation: fillBar 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle border glow on hero form */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(155, 45, 107, 0.2); }
+  50% { border-color: rgba(155, 45, 107, 0.4); }
+}
+
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* Scrollbar hide for horizontal scrollers */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
