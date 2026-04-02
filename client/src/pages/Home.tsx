@@ -43,7 +43,7 @@ function HeroSection() {
           src={img("/images/hero/hero-bg.jpg")}
           alt=""
           className="w-full h-full object-cover animate-hero-zoom"
-          style={{ objectPosition: "40% 20%" }}
+          style={{ objectPosition: "25% 20%" }}
         />
         {/* Light overlay — image is the star */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/60 via-[#0B1829]/30 to-transparent" />
