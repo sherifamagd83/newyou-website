@@ -26,26 +26,29 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden min-h-[80vh] lg:min-h-[75vh] flex items-center">
-      {/* Full-bleed cinematic hero image */}
+    <section className="relative overflow-hidden min-h-[85vh] lg:min-h-[80vh] flex items-center">
+      {/* Full-bleed cinematic hero image with Ken Burns zoom */}
       <div className="absolute inset-0" aria-hidden="true">
         <img
           src={img("/images/hero/hero-bg.jpg")}
           alt=""
-          className="w-full h-full object-cover"
-          style={{ objectPosition: "50% 25%" }}
+          className="w-full h-full object-cover animate-hero-zoom"
+          style={{ objectPosition: "70% 30%" }}
         />
-        {/* Multi-layer overlay for depth and text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/95 via-[#0B1829]/80 to-[#0B1829]/40 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/90 via-transparent to-[#0B1829]/30" />
-        {/* Subtle warm color wash to tie the image to the brand */}
-        <div className="absolute inset-0 bg-gradient-to-br from-magenta/10 via-transparent to-gold/5" />
+        {/* Multi-layer overlay tuned for warm sunset tones */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/95 via-[#0B1829]/85 to-[#0B1829]/30 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/80 via-transparent to-[#0B1829]/20" />
+        {/* Warm amber wash to enhance the sunset and tie to brand gold */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#9B2D6B]/8 via-transparent to-[#C8973E]/10" />
+        {/* Extra vignette for depth */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 70% 40%, transparent 40%, rgba(11,24,41,0.4) 100%)' }} />
       </div>
 
-      {/* Ambient glow accents */}
+      {/* Ambient glow accents — larger, warmer */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-[15%] left-[5%] w-[200px] h-[200px] rounded-full bg-magenta/8 blur-[100px] animate-float-slow" />
-        <div className="absolute bottom-[10%] left-[20%] w-[150px] h-[150px] rounded-full bg-gold/6 blur-[80px] animate-float" />
+        <div className="absolute top-[10%] left-[3%] w-[280px] h-[280px] rounded-full bg-[#9B2D6B]/10 blur-[120px] animate-float-slow" />
+        <div className="absolute bottom-[15%] left-[15%] w-[200px] h-[200px] rounded-full bg-[#C8973E]/8 blur-[100px] animate-float" />
+        <div className="absolute top-[20%] right-[25%] w-[180px] h-[180px] rounded-full bg-[#C8973E]/6 blur-[90px] animate-float-reverse" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 lg:py-20 relative z-10 w-full">
@@ -112,7 +115,7 @@ function HeroSection() {
 
           {/* Right — Lead Form */}
           <div className="animate-text-reveal-delay-4 relative z-20">
-            <div className="bg-[#0B1829]/80 backdrop-blur-xl rounded-3xl p-7 md:p-8 border border-white/[0.12] shadow-2xl shadow-black/40">
+            <div className="bg-[#0B1829]/80 backdrop-blur-xl rounded-3xl p-7 md:p-8 border border-white/[0.12] shadow-2xl shadow-black/40 animate-border-glow">
               <h3 className="text-xl font-bold text-white mb-1">See If You Qualify</h3>
               <p className="text-white/50 text-sm mb-5">Free, no-obligation assessment</p>
               <LeadForm variant="hero" className="!bg-transparent !backdrop-blur-none !border-0 !p-0 !shadow-none" />

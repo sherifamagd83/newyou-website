@@ -489,6 +489,16 @@
   animation: borderGlow 3s ease-in-out infinite;
 }
 
+/* Ken Burns slow zoom for hero background */
+@keyframes heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.animate-hero-zoom {
+  animation: heroZoom 20s ease-out forwards;
+}
+
 /* Scrollbar hide for horizontal scrollers */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
