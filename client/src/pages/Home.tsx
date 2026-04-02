@@ -5,7 +5,7 @@ import {
   ChevronLeft, ChevronRight, Play, Calculator, Activity, TrendingDown,
   CheckCircle2, Heart, Building2,
 } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import LeadForm from "@/components/LeadForm";
@@ -25,6 +25,7 @@ export default function Home() {
       <InsurancePricing />
       <ReviewsCarousel />
       <FinalCTA />
+      <ExitIntentPopup />
     </div>
   );
 }
@@ -34,18 +35,18 @@ export default function Home() {
    ============================================= */
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden min-h-[85vh] lg:min-h-[80vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[90vh] lg:min-h-[85vh] flex items-center">
       {/* Full-bleed cinematic hero image with Ken Burns zoom */}
       <div className="absolute inset-0" aria-hidden="true">
         <img
           src={img("/images/hero/hero-bg.jpg")}
           alt=""
           className="w-full h-full object-cover animate-hero-zoom"
-          style={{ objectPosition: "30% 25%" }}
+          style={{ objectPosition: "center 30%" }}
         />
         {/* Light overlay — image is the star */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/70 via-[#0B1829]/40 to-[#0B1829]/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/60 via-[#0B1829]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/40 via-transparent to-transparent" />
       </div>
 
       {/* Ambient glow accents */}
@@ -1041,5 +1042,47 @@ function FinalCTA() {
         </ScrollFadeIn>
       </div>
     </section>
+  );
+}
+
+/* =============================================
+   EXIT INTENT POPUP
+   ============================================= */
+function ExitIntentPopup() {
+  const [show, setShow] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    if (dismissed) return;
+    const handler = (e: MouseEvent) => {
+      if (e.clientY <= 5) {
+        setShow(true);
+      }
+    };
+    document.addEventListener("mousemove", handler);
+    return () => document.removeEventListener("mousemove", handler);
+  }, [dismissed]);
+
+  if (!show || dismissed) return null;
+
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm animate-fade-in-up" onClick={() => setDismissed(true)}>
+      <div className="bg-white rounded-3xl p-8 md:p-10 max-w-md mx-4 shadow-2xl relative" onClick={(e) => e.stopPropagation()}>
+        <button onClick={() => setDismissed(true)} className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors text-gray-500" data-testid="button-exit-intent-close">
+          ✕
+        </button>
+        <div className="text-center">
+          <div className="w-16 h-16 rounded-full bg-magenta/10 flex items-center justify-center mx-auto mb-4">
+            <HeartPulse className="w-8 h-8 text-magenta" />
+          </div>
+          <h3 className="font-serif text-2xl font-bold text-navy mb-2">Wait — Don't Leave Yet!</h3>
+          <p className="text-muted-foreground mb-6">Get a free insurance verification and find out if weight loss surgery is covered — in less than 5 minutes.</p>
+          <Link href="/insurance" onClick={() => setDismissed(true)} className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg w-full justify-center text-base" data-testid="link-exit-intent-insurance">
+            Free Insurance Check <ArrowRight className="w-5 h-5" />
+          </Link>
+          <p className="text-xs text-muted-foreground mt-4">No obligation. HIPAA compliant. Results in 24 hours.</p>
+        </div>
+      </div>
+    </div>
   );
 }

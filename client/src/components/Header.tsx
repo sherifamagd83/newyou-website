@@ -82,10 +82,10 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               {PRACTICE.phone}
             </a>
-            <Link href="/request-consultation"
+            <Link href="/book"
               className="hidden sm:inline-flex bg-magenta hover:bg-magenta-light text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg"
-              data-testid="link-request-consultation">
-              Request Consultation
+              data-testid="link-book-now">
+              Book Now
             </Link>
             <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2" data-testid="button-mobile-menu">
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -119,9 +119,9 @@ export default function Header() {
                 <a href={PRACTICE.phoneLink} className="flex items-center gap-2 px-3 py-2 font-semibold text-navy">
                   <Phone className="w-4 h-4" /> {PRACTICE.phone}
                 </a>
-                <Link href="/request-consultation"
+                <Link href="/book"
                   className="block text-center bg-magenta text-white font-semibold px-5 py-3 rounded-full">
-                  Request Consultation
+                  Book Now
                 </Link>
               </div>
             </nav>

@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Switch, Route, Router } from "wouter";
+import { Link } from "wouter";
 import { useHashLocation } from "wouter/use-hash-location";
+import { Phone, ArrowRight } from "lucide-react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -25,6 +27,8 @@ import Reframe from "@/pages/Reframe";
 import Aesthetics from "@/pages/Aesthetics";
 import RequestConsultation from "@/pages/RequestConsultation";
 import Contact from "@/pages/Contact";
+import Telehealth from "@/pages/Telehealth";
+import BookOnline from "@/pages/BookOnline";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -40,7 +44,7 @@ function AppRouter() {
     <>
       <ScrollToTop />
       <Header />
-      <main className="min-h-screen">
+      <main className="min-h-screen pb-16 sm:pb-0">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/start-here" component={StartHere} />
@@ -59,11 +63,22 @@ function AppRouter() {
           <Route path="/aesthetics" component={Aesthetics} />
           <Route path="/request-consultation" component={RequestConsultation} />
           <Route path="/contact" component={Contact} />
+          <Route path="/telehealth" component={Telehealth} />
+          <Route path="/book" component={BookOnline} />
           <Route component={NotFound} />
         </Switch>
       </main>
       <Footer />
       <ChatWidget />
+      {/* Sticky mobile CTA bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t shadow-lg p-3 flex gap-2 sm:hidden">
+        <a href="tel:+13148877605" className="flex-1 bg-navy text-white text-center font-semibold py-3 rounded-xl flex items-center justify-center gap-2 text-sm" data-testid="mobile-cta-call">
+          <Phone className="w-4 h-4" /> Call Now
+        </a>
+        <Link href="/book" className="flex-1 bg-magenta text-white text-center font-semibold py-3 rounded-xl flex items-center justify-center gap-2 text-sm" data-testid="mobile-cta-book">
+          Book Now <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
     </>
   );
 }

@@ -81,6 +81,7 @@ export const NAV_ITEMS = [
     { label: "REFRAME Coaching", href: "/reframe" },
     { label: "Aesthetics", href: "/aesthetics" },
   ]},
+  { label: "Telehealth", href: "/telehealth" },
   { label: "Contact", href: "/contact" },
 ];
 
