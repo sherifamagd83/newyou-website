@@ -3,20 +3,12 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Pill, DollarSign, Stethoscope, TrendingDown, ChevronDown, Star } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import LeadForm from "@/components/LeadForm";
+import PageHero from "@/components/PageHero";
 
 export default function GLP1() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal/15 rounded-full blur-3xl" /></div>
-        <div className="max-w-4xl mx-auto px-4 relative text-center">
-          <span className="inline-block bg-white/10 text-white/80 text-sm px-4 py-1 rounded-full mb-4">No Surgery Required</span>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">GLP-1 / Semaglutide Program</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Medically supervised weight loss with Semaglutide — the breakthrough medication helping patients lose 15-20% of body weight without surgery.
-          </p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-glp1.jpg" badge="No Surgery Required" title="GLP-1 / Semaglutide Program" subtitle="Medically supervised weight loss with Semaglutide — the breakthrough medication helping patients lose 15-20% of body weight without surgery." />
 
       <GLP1Quiz />
 

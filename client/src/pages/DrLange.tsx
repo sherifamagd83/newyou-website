@@ -3,6 +3,7 @@ import { ArrowRight, Award, Building2, GraduationCap, Heart, Shield, Star, BookO
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { DOCTOR, TEAM } from "@/lib/constants";
 import { img } from "@/lib/img";
+import PageHero from "@/components/PageHero";
 
 const teamImages: Record<string, string> = {
   "Dr. Matthew A. Lange, DO": img("/images/team/dr-lange.jpg"),
@@ -14,14 +15,7 @@ const teamImages: Record<string, string> = {
 export default function DrLange() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl" /></div>
-        <div className="max-w-4xl mx-auto px-4 relative text-center">
-          <span className="inline-block bg-white/10 text-white/80 text-sm px-4 py-1 rounded-full mb-4">Top Bariatric Surgeon in St. Louis</span>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Meet {DOCTOR.name}, {DOCTOR.credentials}</h1>
-          <p className="text-white/80 text-lg">{DOCTOR.title}</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-doctor.jpg" badge="Top Bariatric Surgeon in St. Louis" title={`Meet ${DOCTOR.name}, ${DOCTOR.credentials}`} subtitle={DOCTOR.title} />
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">

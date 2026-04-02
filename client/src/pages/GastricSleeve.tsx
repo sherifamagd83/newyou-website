@@ -2,20 +2,12 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, AlertTriangle, Clock, TrendingDown, Shield, Star } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import LeadForm from "@/components/LeadForm";
+import PageHero from "@/components/PageHero";
 
 export default function GastricSleeve() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute top-0 right-0 w-[400px] h-[400px] bg-magenta/10 rounded-full blur-3xl" /></div>
-        <div className="max-w-4xl mx-auto px-4 relative text-center">
-          <span className="inline-block bg-white/10 text-white/80 text-sm px-4 py-1 rounded-full mb-4">Most Popular Procedure</span>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Gastric Sleeve Surgery</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Also known as Vertical Sleeve Gastrectomy (VSG). The #1 bariatric procedure worldwide, offering dramatic weight loss with a proven safety profile.
-          </p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-surgery.jpg" badge="Most Popular Procedure" title="Gastric Sleeve Surgery" subtitle="Also known as Vertical Sleeve Gastrectomy (VSG). The #1 bariatric procedure worldwide, offering dramatic weight loss with a proven safety profile." />
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">

@@ -2,16 +2,12 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, Calculator, ChevronDown, BookOpen, Play, Download, Lock, CheckCircle2 } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import PageHero from "@/components/PageHero";
 
 export default function Resources() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Education Hub</h1>
-          <p className="text-white/80 text-lg">Knowledge is power. Learn everything about weight loss surgery, nutrition, and long-term success.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-doctor.jpg" title="Patient Resources" subtitle="Educational materials, support group information, and helpful tools for your weight loss journey." />
 
       <InlineBMI />
       <FAQSection />

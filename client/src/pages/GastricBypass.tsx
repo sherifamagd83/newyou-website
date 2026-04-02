@@ -2,20 +2,12 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, AlertTriangle, Star } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import LeadForm from "@/components/LeadForm";
+import PageHero from "@/components/PageHero";
 
 export default function GastricBypass() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal/10 rounded-full blur-3xl" /></div>
-        <div className="max-w-4xl mx-auto px-4 relative text-center">
-          <span className="inline-block bg-white/10 text-white/80 text-sm px-4 py-1 rounded-full mb-4">Gold Standard</span>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Gastric Bypass Surgery</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Roux-en-Y Gastric Bypass — the gold standard for surgical weight loss with proven metabolic benefits including diabetes reversal.
-          </p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-surgery.jpg" badge="Gold Standard" title="Gastric Bypass Surgery" subtitle="Roux-en-Y Gastric Bypass — the gold standard for surgical weight loss with proven metabolic benefits including diabetes reversal." />
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">

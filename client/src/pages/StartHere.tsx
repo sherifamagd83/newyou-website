@@ -2,32 +2,17 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Calculator, CheckCircle2, ArrowRight, Clock, Stethoscope, FileCheck, HeartPulse, Scale, CalendarCheck, TrendingDown } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import PageHero from "@/components/PageHero";
 
 export default function StartHere() {
   return (
     <div>
-      <PageHero />
+      <PageHero image="/images/hero/hero-surgery.jpg" badge="Begin Your Journey" title="Start Here" subtitle="Everything you need to know about starting your weight loss journey with Dr. Lange." />
       <BMICalculator />
       <QualifyChecklist />
       <HealthAssessmentForm />
       <WhatToExpect />
     </div>
-  );
-}
-
-function PageHero() {
-  return (
-    <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-magenta/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-      </div>
-      <div className="max-w-3xl mx-auto px-4 relative">
-        <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Am I a Candidate?</h1>
-        <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
-          Find out if you qualify for weight loss surgery or our non-surgical programs. Use our BMI calculator and complete a free health assessment.
-        </p>
-      </div>
-    </section>
   );
 }
 

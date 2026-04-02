@@ -1,18 +1,12 @@
 import { Link } from "wouter";
 import { ArrowRight, Sparkles, Sun, Waves, Zap, CheckCircle2 } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import PageHero from "@/components/PageHero";
 
 export default function Aesthetics() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/15 rounded-full blur-3xl" /></div>
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <span className="inline-block bg-white/10 text-white/80 text-sm px-4 py-1 rounded-full mb-4">Complete Your Transformation</span>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Aesthetics & Body Confidence</h1>
-          <p className="text-white/80 text-lg">After weight loss comes the final step — looking as amazing as you feel. Hair restoration, skin tightening, and body contouring.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-aesthetics.jpg" badge="Complete Your Transformation" title="Aesthetics & Body Confidence" subtitle="After weight loss comes the final step — looking as amazing as you feel. Hair restoration, skin tightening, and body contouring." />
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">

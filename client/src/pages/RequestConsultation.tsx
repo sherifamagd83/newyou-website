@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CheckCircle2, ArrowRight, ArrowLeft, Phone, Calendar, FileCheck, Heart } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { PRACTICE } from "@/lib/constants";
+import PageHero from "@/components/PageHero";
 
 export default function RequestConsultation() {
   const [step, setStep] = useState(1);
@@ -27,12 +28,7 @@ export default function RequestConsultation() {
 
   return (
     <div>
-      <section className="hero-gradient py-12 md:py-16 text-center relative overflow-hidden">
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-white mb-3">Request a Consultation</h1>
-          <p className="text-white/80">Take the first step toward your transformation. Free, no-obligation consultation.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-surgery.jpg" badge="Free Consultation" title="Request a Consultation" subtitle="Take the first step toward your new life. Fill out the form below and our team will contact you within 24 hours." />
 
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">

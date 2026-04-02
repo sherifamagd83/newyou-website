@@ -1,17 +1,12 @@
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Circle, Pill, Scale, Sparkles } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import PageHero from "@/components/PageHero";
 
 export default function NonSurgical() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal/15 rounded-full blur-3xl" /></div>
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Non-Surgical Options</h1>
-          <p className="text-white/80 text-lg">Not ready for surgery? We offer effective, medically supervised non-surgical weight loss solutions.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-nonsurgical.jpg" title="Non-Surgical Options" subtitle="Not ready for surgery? We offer effective, medically supervised non-surgical weight loss solutions." />
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">

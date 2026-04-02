@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Minimize2, GitBranch, Shuffle, Zap, Circle, RefreshCw } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import PageHero from "@/components/PageHero";
 
 const FULL_PROCEDURES = [
   { name: "Gastric Sleeve", slug: "gastric-sleeve", icon: Minimize2, weightLoss: "60-70%", recovery: "2-4 weeks", insurance: "Yes", how: "Removes ~80% of the stomach, creating a banana-shaped sleeve", desc: "The most popular bariatric procedure worldwide. Reduces hunger hormones while restricting food intake." },
@@ -14,15 +15,7 @@ const FULL_PROCEDURES = [
 export default function Procedures() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-teal/10 rounded-full blur-3xl translate-y-1/2" />
-        </div>
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Our Procedures</h1>
-          <p className="text-white/80 text-lg md:text-xl">Comprehensive surgical and non-surgical weight loss solutions tailored to your needs.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-surgery.jpg" title="Our Procedures" subtitle="Comprehensive surgical and non-surgical weight loss solutions tailored to your needs." />
 
       {/* Procedure Cards */}
       <section className="py-20 bg-white">

@@ -48,7 +48,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 lg:h-[72px]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0" data-testid="link-logo">
-            <img src={img("/images/site/logo-color.png")} alt="New You Surgical Weight Loss" className="h-9 w-auto" />
+            <img src={img("/images/site/logo.jpg")} alt="New You Surgical Weight Loss" className="h-9 w-auto" />
           </Link>
 
           {/* Desktop nav */}

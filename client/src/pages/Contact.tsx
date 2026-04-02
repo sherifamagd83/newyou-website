@@ -2,18 +2,14 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Printer, PhoneForwarded, CheckCircle2 } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { PRACTICE } from "@/lib/constants";
+import PageHero from "@/components/PageHero";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-20 text-center relative overflow-hidden">
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-white/80 text-lg">We'd love to hear from you. Reach out by phone, email, or visit us in Des Peres.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-surgery.jpg" title="Contact Us" subtitle="We're here to answer your questions and help you take the first step." />
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">

@@ -2,17 +2,12 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Shield, CreditCard, DollarSign, Upload, FileCheck } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
+import PageHero from "@/components/PageHero";
 
 export default function Insurance() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/15 rounded-full blur-3xl" /></div>
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Insurance & Financing</h1>
-          <p className="text-white/80 text-lg">We make weight loss surgery accessible. Free insurance verification, financing options, and transparent pricing.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-surgery.jpg" title="Insurance & Financing" subtitle="We accept all major insurance carriers and offer flexible financing options." />
 
       <InsuranceVerificationForm />
 

@@ -4,6 +4,7 @@ import ScrollFadeIn from "@/components/ScrollFadeIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { TRANSFORMATIONS, REVIEWS } from "@/lib/constants";
 import { img } from "@/lib/img";
+import PageHero from "@/components/PageHero";
 
 const TRANSFORMATION_IMAGES: Record<string, { before: string; after: string }> = {
   "Sarah M.": { before: img("/images/beforeafter/chrissy-before.jpg"), after: img("/images/beforeafter/chrissy-after.jpg") },
@@ -15,13 +16,7 @@ const TRANSFORMATION_IMAGES: Record<string, { before: string; after: string }> =
 export default function Results() {
   return (
     <div>
-      <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0"><div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl" /></div>
-        <div className="max-w-3xl mx-auto px-4 relative">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Success Stories</h1>
-          <p className="text-white/80 text-lg">Real patients. Real results. Real transformations.</p>
-        </div>
-      </section>
+      <PageHero image="/images/hero/hero-results.jpg" title="Success Stories" subtitle="Real patients. Real results. Real transformations." />
 
       {/* Stats Banner */}
       <section className="bg-navy py-12">
