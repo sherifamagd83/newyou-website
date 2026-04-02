@@ -36,25 +36,22 @@ export default function Home() {
    ============================================= */
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] lg:min-h-[85vh] flex items-center">
-      {/* Full-bleed cinematic hero image with Ken Burns zoom */}
-      <div className="absolute inset-0" aria-hidden="true">
-        <img
-          src={img("/images/hero/hero-bg.jpg")}
-          alt=""
-          className="w-full h-full object-cover animate-hero-zoom"
-          style={{ objectPosition: "25% 20%" }}
-        />
-        {/* Light overlay — image is the star */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/60 via-[#0B1829]/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/40 via-transparent to-transparent" />
-      </div>
-
+    <section className="relative overflow-hidden min-h-[90vh] lg:min-h-[85vh] flex items-center hero-gradient-animated">
       {/* Ambient glow accents */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-[10%] left-[3%] w-[280px] h-[280px] rounded-full bg-[#9B2D6B]/10 blur-[120px] animate-float-slow" />
-        <div className="absolute bottom-[15%] left-[15%] w-[200px] h-[200px] rounded-full bg-[#C8973E]/8 blur-[100px] animate-float" />
-        <div className="absolute top-[20%] right-[25%] w-[180px] h-[180px] rounded-full bg-[#C8973E]/6 blur-[90px] animate-float-reverse" />
+        <div className="absolute top-[10%] left-[3%] w-[300px] h-[300px] rounded-full bg-[#9B2D6B]/15 blur-[120px] animate-float-slow" />
+        <div className="absolute bottom-[5%] right-[10%] w-[250px] h-[250px] rounded-full bg-[#C8973E]/12 blur-[100px] animate-float" />
+        <div className="absolute top-[30%] right-[30%] w-[200px] h-[200px] rounded-full bg-[#1A8F9E]/10 blur-[90px] animate-float-reverse" />
+      </div>
+
+      {/* Hero portrait — positioned behind content on right-center, visible between text and form */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-[15%] lg:-translate-x-[10%] h-[85%] pointer-events-none z-[1] hidden md:block" aria-hidden="true">
+        <img
+          src={img("/images/hero/hero-portrait.jpg")}
+          alt=""
+          className="h-full w-auto object-contain object-bottom opacity-30 lg:opacity-40"
+          style={{ maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%)" }}
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 lg:py-20 relative z-10 w-full">
@@ -130,8 +127,8 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom fade to white page content */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10" />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#1B2A4A] to-transparent z-10" />
     </section>
   );
 }
