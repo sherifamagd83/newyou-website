@@ -33,15 +33,15 @@ function HeroSection() {
           src={img("/images/hero/hero-bg.jpg")}
           alt=""
           className="w-full h-full object-cover animate-hero-zoom"
-          style={{ objectPosition: "70% 30%" }}
+          style={{ objectPosition: "30% 25%" }}
         />
         {/* Multi-layer overlay tuned for warm sunset tones */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/95 via-[#0B1829]/85 to-[#0B1829]/30 lg:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/80 via-transparent to-[#0B1829]/20" />
         {/* Warm amber wash to enhance the sunset and tie to brand gold */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#9B2D6B]/8 via-transparent to-[#C8973E]/10" />
-        {/* Extra vignette for depth */}
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 70% 40%, transparent 40%, rgba(11,24,41,0.4) 100%)' }} />
+        {/* Extra vignette for depth — keep right side open */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 50%, transparent 30%, rgba(11,24,41,0.25) 100%)' }} />
       </div>
 
       {/* Ambient glow accents — larger, warmer */}
