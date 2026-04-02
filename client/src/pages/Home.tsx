@@ -36,22 +36,18 @@ export default function Home() {
    ============================================= */
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] lg:min-h-[85vh] flex items-center hero-gradient-animated">
-      {/* Ambient glow accents */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-[10%] left-[3%] w-[300px] h-[300px] rounded-full bg-[#9B2D6B]/15 blur-[120px] animate-float-slow" />
-        <div className="absolute bottom-[5%] right-[10%] w-[250px] h-[250px] rounded-full bg-[#C8973E]/12 blur-[100px] animate-float" />
-        <div className="absolute top-[30%] right-[30%] w-[200px] h-[200px] rounded-full bg-[#1A8F9E]/10 blur-[90px] animate-float-reverse" />
-      </div>
-
-      {/* Hero portrait — positioned behind content on right-center, visible between text and form */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-[15%] lg:-translate-x-[10%] h-[85%] pointer-events-none z-[1] hidden md:block" aria-hidden="true">
+    <section className="relative overflow-hidden min-h-[90vh] lg:min-h-[85vh] flex items-center">
+      {/* Full-bleed cinematic hero image */}
+      <div className="absolute inset-0" aria-hidden="true">
         <img
-          src={img("/images/hero/hero-portrait.jpg")}
+          src={img("/images/hero/hero-bg.jpg")}
           alt=""
-          className="h-full w-auto object-contain object-bottom opacity-30 lg:opacity-40"
-          style={{ maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%)", WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%)" }}
+          className="w-full h-full object-cover animate-hero-zoom"
+          style={{ objectPosition: "center 35%" }}
         />
+        {/* Minimal overlays — just enough for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/70 via-[#0B1829]/25 to-[#0B1829]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/40 via-transparent to-[#0B1829]/20" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-16 lg:py-20 relative z-10 w-full">
@@ -127,8 +123,8 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#1B2A4A] to-transparent z-10" />
+      {/* Bottom fade to stats banner */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1B2A4A] to-transparent z-10" />
     </section>
   );
 }
