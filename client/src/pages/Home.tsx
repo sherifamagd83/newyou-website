@@ -43,9 +43,9 @@ function HeroSection() {
           className="w-full h-full object-cover animate-hero-zoom"
           style={{ objectPosition: "30% 25%" }}
         />
-        {/* Lighter overlay — let the image shine through */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/75 via-[#0B1829]/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/60 via-transparent to-transparent" />
+        {/* Light overlay — image is the star */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/70 via-[#0B1829]/40 to-[#0B1829]/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/50 via-transparent to-transparent" />
       </div>
 
       {/* Ambient glow accents */}
