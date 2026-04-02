@@ -20,6 +20,7 @@ export default function Home() {
       <JourneySection />
       <TabbedProcedures />
       <BMICalculatorSection />
+      <QuizCTA />
       <TransformationsCarousel />
       <DrLangeSection />
       <InsurancePricing />
@@ -42,7 +43,7 @@ function HeroSection() {
           src={img("/images/hero/hero-bg.jpg")}
           alt=""
           className="w-full h-full object-cover animate-hero-zoom"
-          style={{ objectPosition: "center 30%" }}
+          style={{ objectPosition: "40% 20%" }}
         />
         {/* Light overlay — image is the star */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1829]/60 via-[#0B1829]/30 to-transparent" />
@@ -621,6 +622,26 @@ function BMICalculatorSection() {
               );
             })()}
           </div>
+        </ScrollFadeIn>
+      </div>
+    </section>
+  );
+}
+
+/* =============================================
+   QUIZ CTA SECTION
+   ============================================= */
+function QuizCTA() {
+  return (
+    <section className="py-16 md:py-20 bg-gradient-to-r from-navy via-[#1e3358] to-navy relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, rgba(155,45,107,0.4) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(26,143,158,0.4) 0%, transparent 50%)" }} />
+      <div className="max-w-4xl mx-auto px-4 relative text-center">
+        <ScrollFadeIn>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Not Sure Which Option Is Right for You?</h2>
+          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Take our free 2-minute quiz to find out if you're a candidate for weight loss surgery, GLP-1 medication, or non-surgical options.</p>
+          <Link href="/quiz" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-10 py-4 rounded-full transition-all shadow-xl shadow-magenta/30 text-lg" data-testid="link-quiz-cta">
+            Take the Quiz <ArrowRight className="w-5 h-5" />
+          </Link>
         </ScrollFadeIn>
       </div>
     </section>

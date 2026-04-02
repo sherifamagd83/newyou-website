@@ -29,6 +29,9 @@ import RequestConsultation from "@/pages/RequestConsultation";
 import Contact from "@/pages/Contact";
 import Telehealth from "@/pages/Telehealth";
 import BookOnline from "@/pages/BookOnline";
+import Quiz from "@/pages/Quiz";
+import VitaminStore from "@/pages/VitaminStore";
+import SupportGroups from "@/pages/SupportGroups";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -65,6 +68,9 @@ function AppRouter() {
           <Route path="/contact" component={Contact} />
           <Route path="/telehealth" component={Telehealth} />
           <Route path="/book" component={BookOnline} />
+          <Route path="/quiz" component={Quiz} />
+          <Route path="/vitamins" component={VitaminStore} />
+          <Route path="/support-groups" component={SupportGroups} />
           <Route component={NotFound} />
         </Switch>
       </main>

@@ -76,6 +76,8 @@ export default function Footer() {
                   { label: "Request Consultation", href: "/request-consultation" },
                   { label: "Meet Dr. Lange", href: "/dr-lange" },
                   { label: "Insurance & Financing", href: "/insurance" },
+                  { label: "Am I a Candidate? Quiz", href: "/quiz" },
+                  { label: "Support Groups", href: "/support-groups" },
                   { label: "Patient Portal", href: PRACTICE.portalUrl, external: true },
                   { label: "Online Bill Pay", href: PRACTICE.billPayUrl, external: true },
                   { label: "Vitamin Store", href: PRACTICE.vitaminStoreUrl, external: true },
@@ -103,6 +105,7 @@ export default function Footer() {
                   { label: "ORBERA® Balloon", href: "/non-surgical" },
                   { label: "REFRAME Coaching", href: "/reframe" },
                   { label: "Aesthetics", href: "/aesthetics" },
+                  { label: "Vitamin Store", href: "/vitamins" },
                 ].map(({ label, href }) => (
                   <li key={label}>
                     <Link href={href} className="hover:text-white transition-colors">{label}</Link>
