@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Circle, Pill, Scale, Sparkles } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function NonSurgical() {
   return (
@@ -56,6 +57,11 @@ export default function NonSurgical() {
               </ScrollFadeIn>
             ))}
           </div>
+          <ScrollFadeIn className="mt-12">
+            <div className="rounded-2xl overflow-hidden">
+              <img src={img("/images/stock/consultation.jpg")} alt="Non-surgical weight loss consultation" className="w-full h-64 object-cover rounded-2xl" />
+            </div>
+          </ScrollFadeIn>
         </div>
       </section>
 

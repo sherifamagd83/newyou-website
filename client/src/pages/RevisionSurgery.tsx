@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, RefreshCw, Star, AlertCircle } from "lucide-r
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import LeadForm from "@/components/LeadForm";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function RevisionSurgery() {
   return (
@@ -52,6 +53,12 @@ export default function RevisionSurgery() {
                       <p className="text-sm text-muted-foreground">{type.desc}</p>
                     </div>
                   ))}
+                </div>
+              </ScrollFadeIn>
+
+              <ScrollFadeIn>
+                <div className="rounded-2xl overflow-hidden mt-8">
+                  <img src={img("/images/stock/doctor-consultation.jpg")} alt="Dr. Lange consulting with a revision surgery patient" className="w-full h-64 object-cover rounded-2xl" />
                 </div>
               </ScrollFadeIn>
 

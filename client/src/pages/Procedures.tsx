@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Minimize2, GitBranch, Shuffle, Zap, Circle, RefreshCw } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 const FULL_PROCEDURES = [
   { name: "Gastric Sleeve", slug: "gastric-sleeve", icon: Minimize2, weightLoss: "60-70%", recovery: "2-4 weeks", insurance: "Yes", how: "Removes ~80% of the stomach, creating a banana-shaped sleeve", desc: "The most popular bariatric procedure worldwide. Reduces hunger hormones while restricting food intake." },
@@ -20,6 +21,11 @@ export default function Procedures() {
       {/* Procedure Cards */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
+          <ScrollFadeIn className="mb-12">
+            <div className="rounded-2xl overflow-hidden">
+              <img src={img("/images/stock/doctor-consultation.jpg")} alt="Dr. Lange discussing procedure options with a patient" className="w-full h-64 object-cover rounded-2xl" />
+            </div>
+          </ScrollFadeIn>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {FULL_PROCEDURES.map((proc, i) => (
               <ScrollFadeIn key={proc.slug} delay={i * 80}>

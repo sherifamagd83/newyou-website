@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Printer, PhoneForwarded, CheckCircle2 } fro
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import { PRACTICE } from "@/lib/constants";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -17,6 +18,11 @@ export default function Contact() {
             {/* Contact Info */}
             <ScrollFadeIn>
               <div className="space-y-8">
+                <ScrollFadeIn>
+                  <div className="rounded-2xl overflow-hidden mb-8">
+                    <img src={img("/images/stock/office-1.jpg")} alt="New You Surgical Weight Loss office exterior" className="w-full h-56 object-cover rounded-2xl" />
+                  </div>
+                </ScrollFadeIn>
                 <div>
                   <h2 className="font-serif text-2xl font-bold text-navy mb-6">Get in Touch</h2>
                   <div className="space-y-5">

@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, AlertTriangle, Star } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import LeadForm from "@/components/LeadForm";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function GastricBypass() {
   return (
@@ -16,6 +17,9 @@ export default function GastricBypass() {
               <ScrollFadeIn>
                 <h2 className="font-serif text-2xl font-bold text-navy mb-4">How It Works</h2>
                 <div className="bg-gray-50 rounded-2xl p-8">
+                  <div className="mb-6">
+                    <img src={img("/images/site/illustration-bypass.jpg")} alt="Gastric Bypass Roux-en-Y illustration" className="w-full max-w-xs mx-auto rounded-xl" />
+                  </div>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Roux-en-Y Gastric Bypass is a two-part procedure. First, Dr. Lange creates a small pouch from the top of your stomach (about the size of an egg). Then, the small intestine is divided and connected directly to this new pouch, bypassing most of the stomach and the first part of the small intestine.
                   </p>

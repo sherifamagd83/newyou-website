@@ -102,6 +102,11 @@ export default function Reframe() {
       <section className="section-gradient py-16">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScrollFadeIn>
+            <div className="rounded-2xl overflow-hidden mt-8 mb-8">
+              <img src={img("/images/stock/consultation.jpg")} alt="REFRAME behavioral coaching session" className="w-full h-56 object-cover rounded-2xl" />
+            </div>
+          </ScrollFadeIn>
+          <ScrollFadeIn>
             <div className="bg-navy rounded-2xl p-8 text-white">
               <div className="flex gap-1 justify-center mb-4">{[1,2,3,4,5].map(s => <Star key={s} className="w-5 h-5 fill-yellow-500 text-yellow-500" />)}</div>
               <p className="text-lg leading-relaxed italic mb-4">"Lora's support groups and coaching sessions were the secret weapon in my weight loss journey. She helped me understand WHY I was eating, not just WHAT. I'm 2 years post-op and maintaining my weight loss because of REFRAME."</p>

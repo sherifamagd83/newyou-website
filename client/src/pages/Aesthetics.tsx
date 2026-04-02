@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ArrowRight, Sparkles, Sun, Waves, Zap, CheckCircle2 } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function Aesthetics() {
   return (
@@ -70,6 +71,11 @@ export default function Aesthetics() {
               </ScrollFadeIn>
             ))}
           </div>
+          <ScrollFadeIn className="mt-12">
+            <div className="rounded-2xl overflow-hidden">
+              <img src={img("/images/stock/office-1.jpg")} alt="New You aesthetics treatment room" className="w-full h-64 object-cover rounded-2xl" />
+            </div>
+          </ScrollFadeIn>
         </div>
       </section>
 

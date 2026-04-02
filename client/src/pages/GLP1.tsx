@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Pill, DollarSign, Stethoscope, TrendingDown, 
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import LeadForm from "@/components/LeadForm";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function GLP1() {
   return (
@@ -21,6 +22,9 @@ export default function GLP1() {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   GLP-1 receptor agonists like Semaglutide mimic a natural hormone that regulates appetite and blood sugar. They work by slowing gastric emptying, reducing hunger signals in the brain, and improving insulin sensitivity — leading to significant, sustained weight loss.
                 </p>
+                <div className="rounded-2xl overflow-hidden mb-6">
+                  <img src={img("/images/stock/doctor-patient.jpg")} alt="Medical consultation for GLP-1 program" className="w-full h-56 object-cover rounded-2xl" />
+                </div>
                 <div className="grid sm:grid-cols-3 gap-4 mt-6">
                   {[
                     { icon: Pill, title: "Weekly Injection", desc: "Simple self-administered injection once per week" },

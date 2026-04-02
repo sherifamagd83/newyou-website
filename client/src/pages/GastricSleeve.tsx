@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, AlertTriangle, Clock, TrendingDown, Shield, S
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import LeadForm from "@/components/LeadForm";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function GastricSleeve() {
   return (
@@ -16,12 +17,8 @@ export default function GastricSleeve() {
               <ScrollFadeIn>
                 <h2 className="font-serif text-2xl font-bold text-navy mb-4">How It Works</h2>
                 <div className="bg-gray-50 rounded-2xl p-8">
-                  <div className="flex items-center justify-center mb-6">
-                    <div className="flex items-center gap-8">
-                      <div className="text-center"><div className="w-20 h-28 rounded-xl bg-navy/10 mx-auto mb-2" /><span className="text-xs text-muted-foreground">Before</span></div>
-                      <ArrowRight className="w-8 h-8 text-magenta" />
-                      <div className="text-center"><div className="w-10 h-28 rounded-xl bg-magenta/10 mx-auto mb-2" /><span className="text-xs text-muted-foreground">After (~80% removed)</span></div>
-                    </div>
+                  <div className="mb-6">
+                    <img src={img("/images/site/illustration-sleeve.jpg")} alt="Gastric Sleeve Surgery — before and after illustration" className="w-full max-w-lg mx-auto rounded-xl" />
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
                     During gastric sleeve surgery, Dr. Lange removes approximately 80% of the stomach laparoscopically, creating a narrow, banana-shaped "sleeve." This dramatically reduces the amount of food you can eat and decreases the production of ghrelin — the hunger hormone — so you feel satisfied with smaller portions.

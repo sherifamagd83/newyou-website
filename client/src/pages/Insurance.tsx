@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, Shield, CreditCard, DollarSign, Upload, FileCheck } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import PageHero from "@/components/PageHero";
+import { img } from "@/lib/img";
 
 export default function Insurance() {
   return (
@@ -13,7 +14,12 @@ export default function Insurance() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <ScrollFadeIn className="text-center mb-12">
+          <ScrollFadeIn className="mt-8">
+            <div className="rounded-2xl overflow-hidden">
+              <img src={img("/images/stock/office-2.jpg")} alt="New You Surgical Weight Loss office" className="w-full h-56 object-cover rounded-2xl" />
+            </div>
+          </ScrollFadeIn>
+          <ScrollFadeIn className="text-center mb-12 mt-12">
             <h2 className="font-serif text-3xl font-bold text-navy mb-4">Insurance We Work With</h2>
             <p className="text-muted-foreground">We accept and work with all major insurance carriers. Our team handles pre-authorization for you.</p>
           </ScrollFadeIn>
