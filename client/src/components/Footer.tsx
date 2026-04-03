@@ -59,9 +59,9 @@ export default function Footer() {
               </p>
               <div className="flex gap-3 mt-4">
                 {[
-                  { Icon: Facebook, href: "#" },
-                  { Icon: Instagram, href: "#" },
-                  { Icon: Youtube, href: "#" },
+                  { Icon: Facebook, href: "https://www.facebook.com/NewYouWithDrLange" },
+                  { Icon: Instagram, href: "https://www.instagram.com/thebariatricsurgeonstl/" },
+                  { Icon: Youtube, href: "https://www.youtube.com/@newyousurgicalweightloss" },
                   { Icon: Linkedin, href: "https://www.linkedin.com/company/new-you-surgical-weight-loss/" },
                 ].map(({ Icon, href }, i) => (
                   <a key={i} href={href} target="_blank" rel="noopener noreferrer"

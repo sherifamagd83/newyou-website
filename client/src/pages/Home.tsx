@@ -92,7 +92,7 @@ function HeroSection() {
                 <div className="text-white/50 text-sm mb-1">Fellowship, Cleveland Clinic</div>
                 <div className="flex items-center gap-1">
                   {[1,2,3,4,5].map((s) => <Star key={s} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />)}
-                  <span className="text-white/40 text-xs ml-1.5">5.0 rating · 500+ procedures</span>
+                  <span className="text-white/40 text-xs ml-1.5">5.0 rating · Hundreds of patients helped</span>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ function HeroSection() {
             {/* Trust badges */}
             <div className="animate-text-reveal-delay-3 flex flex-wrap gap-x-5 gap-y-3">
               {[
-                { icon: Award, text: "14+ Years Experience" },
+                { icon: Award, text: "8+ Years Experience" },
                 { icon: HeartPulse, text: "All Insurance Accepted" },
                 { icon: Users, text: "500+ Lives Transformed" },
               ].map(({ icon: Icon, text }) => (
@@ -135,7 +135,7 @@ function HeroSection() {
 function LiveStatsBanner() {
   const stats = [
     { value: 500, suffix: "+", label: "Lives Transformed", icon: Users },
-    { value: 14, suffix: "+", label: "Years Experience", icon: Award },
+    { value: 8, suffix: "+", label: "Years Experience", icon: Award },
     { value: 98, suffix: "%", label: "Patient Satisfaction", icon: HeartPulse },
     { value: 5, suffix: ".0", label: "Google Rating", icon: Star },
   ];
@@ -765,7 +765,7 @@ function DrLangeSection() {
     { icon: Shield, label: "Fellowship", value: "Cleveland Clinic" },
     { icon: Award, label: "Board Certified", value: "DO" },
     { icon: Building2, label: "Hospitals", value: "Mercy & St. Luke's" },
-    { icon: Heart, label: "Procedures", value: "500+" },
+    { icon: Heart, label: "Procedures", value: "Hundreds" },
   ];
 
   return (
@@ -804,7 +804,7 @@ function DrLangeSection() {
               {DOCTOR.name}, {DOCTOR.credentials}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              As Medical Director at New You Surgical Weight Loss, Dr. Lange brings fellowship training from the prestigious Cleveland Clinic Florida and over 14 years of surgical excellence in bariatric and metabolic surgery.
+              As Medical Director at New You Surgical Weight Loss, Dr. Lange brings fellowship training from the prestigious Cleveland Clinic Florida and over 8 years of surgical excellence in bariatric and metabolic surgery.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Board-certified and affiliated with Mercy and St. Luke's Hospitals, Dr. Lange specializes in minimally invasive bariatric procedures including gastric sleeve, bypass, duodenal switch, and complex revision surgeries. His commitment to patient-centered care extends far beyond the operating room.

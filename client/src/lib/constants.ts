@@ -27,14 +27,14 @@ export const DOCTOR = {
   residency: "Michigan State / Genesys Regional Medical Center",
   medSchool: "A.T. Still University, Kirksville College of Osteopathic Medicine",
   affiliations: ["Mercy Hospitals", "St. Luke's Hospitals"],
-  yearsExperience: 14,
+  yearsExperience: 8,
 };
 
 export const TEAM = [
   {
     name: "Dr. Matthew A. Lange, DO",
     role: "Medical Director & Lead Bariatric Surgeon",
-    bio: "Board-certified bariatric surgeon with fellowship training at Cleveland Clinic Florida. Over 14 years of experience transforming lives through surgical weight loss.",
+    bio: "Board-certified bariatric surgeon with fellowship training at Cleveland Clinic Florida. Over 8 years of experience transforming lives through surgical weight loss.",
   },
   {
     name: "Lora Grabow, LMSW",
@@ -119,7 +119,7 @@ export const REVIEWS = [
   { name: "Jennifer K.", date: "December 2025", rating: 5, text: "I had a failed lap-band from another surgeon. Dr. Lange converted me to a sleeve and the difference is night and day. His expertise with revisions is unmatched in St. Louis.", procedure: "Revision Surgery" },
   { name: "David R.", date: "November 2025", rating: 5, text: "The GLP-1 program was perfect for me since I didn't qualify for surgery. Lost 45 lbs in 6 months with the Semaglutide program. Lora's coaching sessions were the secret weapon.", procedure: "GLP-1 Program" },
   { name: "Amanda L.", date: "October 2025", rating: 5, text: "I'm 2 years post-op and Dr. Lange's team still checks in on me. The support groups with Lora are amazing — it's a family. I went from 310 to 175 lbs and kept it off.", procedure: "Gastric Sleeve" },
-  { name: "Robert W.", date: "March 2026", rating: 5, text: "The insurance process was seamless. Rachel and the team handled everything. I was approved in 3 weeks. Dr. Lange is the most skilled, compassionate surgeon I've ever met.", procedure: "Gastric Bypass" },
+  { name: "Robert W.", date: "March 2026", rating: 5, text: "The insurance process was seamless. Kristina and the team handled everything. I was approved in 3 weeks. Dr. Lange is the most skilled, compassionate surgeon I've ever met.", procedure: "Gastric Bypass" },
   { name: "Lisa P.", date: "January 2026", rating: 5, text: "After my weight loss surgery, I did the hair restoration and red light therapy. New You truly is a one-stop shop for transformation. I look and feel 20 years younger.", procedure: "Aesthetics" },
   { name: "Carlos G.", date: "February 2026", rating: 5, text: "Dr. Lange performed my duodenal switch and the results have been incredible. Lost 160 lbs in 14 months. His surgical skill is world-class. Could not recommend more highly.", procedure: "Duodenal Switch" },
 ];

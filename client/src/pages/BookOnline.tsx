@@ -103,11 +103,12 @@ export default function BookOnline() {
                       className="min-h-[300px] bg-gray-50 rounded-2xl border border-dashed border-gray-200 flex flex-col items-center justify-center p-8 text-center"
                       data-testid="calendar-inperson"
                     >
-                      <Calendar className="w-10 h-10 text-navy/30 mb-3" />
-                      <p className="text-navy/60 font-medium mb-1">Loading appointment calendar...</p>
-                      <p className="text-muted-foreground text-xs">
-                        Or call <a href={PRACTICE.phoneLink} className="text-magenta font-semibold hover:underline">{PRACTICE.phone}</a>
-                      </p>
+                      <Calendar className="w-12 h-12 text-navy/30 mx-auto mb-4" />
+                      <h4 className="font-semibold text-navy mb-2">Online Scheduling Coming Soon</h4>
+                      <p className="text-sm text-muted-foreground mb-4">In the meantime, call us to schedule your appointment.</p>
+                      <a href="tel:+13148877605" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all">
+                        <Phone className="w-4 h-4" /> Call (314) 887-7605
+                      </a>
                     </div>
                     <div className="flex items-center justify-center gap-1.5 mt-2">
                       <span className="text-xs text-muted-foreground">Powered by</span>
@@ -170,11 +171,12 @@ export default function BookOnline() {
                       className="min-h-[300px] bg-gray-50 rounded-2xl border border-dashed border-gray-200 flex flex-col items-center justify-center p-8 text-center"
                       data-testid="calendar-virtual"
                     >
-                      <Video className="w-10 h-10 text-magenta/30 mb-3" />
-                      <p className="text-navy/60 font-medium mb-1">Loading appointment calendar...</p>
-                      <p className="text-muted-foreground text-xs">
-                        Or call <a href={PRACTICE.phoneLink} className="text-magenta font-semibold hover:underline">{PRACTICE.phone}</a>
-                      </p>
+                      <Calendar className="w-12 h-12 text-navy/30 mx-auto mb-4" />
+                      <h4 className="font-semibold text-navy mb-2">Online Scheduling Coming Soon</h4>
+                      <p className="text-sm text-muted-foreground mb-4">In the meantime, call us to schedule your virtual visit.</p>
+                      <a href="tel:+13148877605" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all">
+                        <Phone className="w-4 h-4" /> Call (314) 887-7605
+                      </a>
                     </div>
                     <div className="flex items-center justify-center gap-1.5 mt-2">
                       <span className="text-xs text-muted-foreground">Powered by</span>

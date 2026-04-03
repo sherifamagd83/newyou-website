@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import {
   Video, Calendar, Shield, Clock, CheckCircle2, ArrowRight,
-  Monitor, Smartphone, FileText, Heart,
+  Monitor, Smartphone, FileText, Heart, Phone,
 } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import PageHero from "@/components/PageHero";
@@ -170,12 +170,14 @@ export default function Telehealth() {
                 className="min-h-[480px] flex flex-col items-center justify-center p-12 text-center"
                 data-testid="calendar-embed-telehealth"
               >
-                <div className="w-16 h-16 rounded-2xl bg-navy/5 flex items-center justify-center mx-auto mb-5">
-                  <Calendar className="w-8 h-8 text-navy/40" />
+                <div className="bg-gray-50 border-2 border-dashed border-gray-200 rounded-2xl p-12 text-center">
+                  <Calendar className="w-12 h-12 text-navy/30 mx-auto mb-4" />
+                  <h4 className="font-semibold text-navy mb-2">Online Scheduling Coming Soon</h4>
+                  <p className="text-sm text-muted-foreground mb-4">In the meantime, call us to schedule your virtual visit.</p>
+                  <a href="tel:+13148877605" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all">
+                    <Phone className="w-4 h-4" /> Call (314) 887-7605
+                  </a>
                 </div>
-                <p className="text-navy font-semibold text-lg mb-2">Loading appointment calendar...</p>
-                <p className="text-muted-foreground text-sm mb-1">If the calendar does not load, please call us directly.</p>
-                <a href={PRACTICE.phoneLink} className="text-magenta font-semibold hover:underline text-sm">{PRACTICE.phone}</a>
               </div>
               <div className="border-t bg-gray-50 px-6 py-3 flex items-center justify-center gap-2">
                 <span className="text-xs text-muted-foreground">Powered by</span>

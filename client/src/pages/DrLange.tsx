@@ -55,7 +55,7 @@ export default function DrLange() {
                 <h2 className="font-serif text-2xl font-bold text-navy mb-4">About Dr. Lange</h2>
                 <div className="prose prose-gray max-w-none">
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    Dr. Matthew A. Lange is a board-certified bariatric and general surgeon serving as Medical Director of New You Surgical Weight Loss & General Surgery in St. Louis, Missouri. With over 14 years of surgical experience and fellowship training at the prestigious Cleveland Clinic Florida, Dr. Lange is recognized as one of the region's top weight loss surgeons.
+                    Dr. Matthew A. Lange is a board-certified bariatric and general surgeon serving as Medical Director of New You Surgical Weight Loss & General Surgery in St. Louis, Missouri. With over 8 years of surgical experience and fellowship training at the prestigious Cleveland Clinic Florida, Dr. Lange is recognized as one of the region's top weight loss surgeons.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     Dr. Lange's philosophy centers on providing each patient with a comprehensive, personalized approach to weight loss. He believes that lasting transformation requires more than surgery — it demands a multidisciplinary team, behavioral support, and a genuine, caring relationship between surgeon and patient.
