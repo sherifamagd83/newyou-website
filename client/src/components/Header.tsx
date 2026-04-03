@@ -65,10 +65,17 @@ export default function Header() {
                 {item.children && openDropdown === item.label && (
                   <div className="absolute top-full left-0 mt-0.5 bg-white rounded-xl shadow-xl border py-2 min-w-[200px] animate-in fade-in slide-in-from-top-1 duration-200">
                     {item.children.map((child) => (
-                      <Link key={child.href} href={child.href}
-                        className="block px-4 py-2 text-sm text-foreground hover:text-magenta hover:bg-pink-50 transition-colors">
-                        {child.label}
-                      </Link>
+                      (child as any).external || child.href.startsWith("http") ? (
+                        <a key={child.href} href={child.href} target="_blank" rel="noopener noreferrer"
+                          className="block px-4 py-2 text-sm text-foreground hover:text-magenta hover:bg-pink-50 transition-colors">
+                          {child.label}
+                        </a>
+                      ) : (
+                        <Link key={child.href} href={child.href}
+                          className="block px-4 py-2 text-sm text-foreground hover:text-magenta hover:bg-pink-50 transition-colors">
+                          {child.label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 )}
@@ -106,10 +113,17 @@ export default function Header() {
                   {item.children && (
                     <div className="pl-6 space-y-0.5">
                       {item.children.map((child) => (
-                        <Link key={child.href} href={child.href}
-                          className="block px-3 py-2 text-sm text-muted-foreground hover:text-magenta transition-colors">
-                          {child.label}
-                        </Link>
+                        (child as any).external || child.href.startsWith("http") ? (
+                          <a key={child.href} href={child.href} target="_blank" rel="noopener noreferrer"
+                            className="block px-3 py-2 text-sm text-muted-foreground hover:text-magenta transition-colors">
+                            {child.label}
+                          </a>
+                        ) : (
+                          <Link key={child.href} href={child.href}
+                            className="block px-3 py-2 text-sm text-muted-foreground hover:text-magenta transition-colors">
+                            {child.label}
+                          </Link>
+                        )
                       ))}
                     </div>
                   )}

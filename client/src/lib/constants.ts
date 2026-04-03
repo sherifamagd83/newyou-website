@@ -63,28 +63,51 @@ export const PROCEDURES = [
 ];
 
 export const NAV_ITEMS = [
-  { label: "Start Here", href: "/start-here" },
-  { label: "Procedures", href: "/procedures", children: [
-    { label: "Gastric Sleeve", href: "/procedures/gastric-sleeve" },
-    { label: "Gastric Bypass", href: "/procedures/gastric-bypass" },
-    { label: "Revision Surgery", href: "/procedures/revision-surgery" },
-    { label: "Non-Surgical Options", href: "/non-surgical" },
-    { label: "All Procedures", href: "/procedures" },
-  ]},
-  { label: "GLP-1 Program", href: "/glp1" },
+  {
+    label: "Getting Started",
+    href: "/start-here",
+    children: [
+      { label: "Am I a Candidate?", href: "/quiz" },
+      { label: "What to Expect", href: "/start-here" },
+      { label: "Insurance & Financing", href: "/insurance" },
+    ],
+  },
+  {
+    label: "Procedures",
+    href: "/procedures",
+    children: [
+      { label: "Gastric Sleeve", href: "/procedures/gastric-sleeve" },
+      { label: "Gastric Bypass", href: "/procedures/gastric-bypass" },
+      { label: "Duodenal Switch", href: "/procedures/duodenal-switch" },
+      { label: "SADI-S", href: "/procedures/sadi-s" },
+      { label: "Revision Surgery", href: "/procedures/revision-surgery" },
+      { label: "ORBERA® Balloon", href: "/procedures/orbera" },
+      { label: "Non-Surgical Weight Loss", href: "/non-surgical" },
+      { label: "GLP-1 / Semaglutide", href: "/glp1" },
+    ],
+  },
+  {
+    label: "Aesthetics",
+    href: "/aesthetics",
+    children: [
+      { label: "Skin Tightening (AccentPrime)", href: "/skin-tightening" },
+      { label: "Hair Restoration", href: "/hair-restoration" },
+      { label: "Red Light Therapy", href: "/red-light-therapy" },
+    ],
+  },
   { label: "Results", href: "/results" },
   { label: "Dr. Lange", href: "/dr-lange" },
-  { label: "Insurance", href: "/insurance" },
-  { label: "Resources", href: "/resources", children: [
-    { label: "For Patients", href: "/for-patients" },
-    { label: "Education Hub", href: "/resources" },
-    { label: "REFRAME Coaching", href: "/reframe" },
-    { label: "Aesthetics", href: "/aesthetics" },
-    { label: "Am I a Candidate? Quiz", href: "/quiz" },
-    { label: "Vitamin Store", href: "/vitamins" },
-    { label: "Support Groups", href: "/support-groups" },
-  ]},
-  { label: "Telehealth", href: "/telehealth" },
+  {
+    label: "For Patients",
+    href: "/for-patients",
+    children: [
+      { label: "Support Groups", href: "/support-groups" },
+      { label: "Vitamin Store", href: "https://nyswl.myshopify.com/", external: true },
+      { label: "Patient Portal", href: "https://mycw217.ecwcloud.com/portal26390/jsp/100mp/login_otp.jsp", external: true },
+      { label: "Pay My Bill", href: "https://www.healowpay.com/HealowPay/jsp/healow/login.jsp", external: true },
+      { label: "FAQs", href: "/resources" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 

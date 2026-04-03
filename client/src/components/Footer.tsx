@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Shield, Award, Building2, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Shield, Award, Building2, Heart, Linkedin } from "lucide-react";
 import { PRACTICE, DOCTOR } from "@/lib/constants";
 import { img } from "@/lib/img";
 
@@ -58,12 +58,22 @@ export default function Footer() {
                 Missouri's premier bariatric surgery center led by {DOCTOR.name}, {DOCTOR.credentials}. Comprehensive surgical and non-surgical weight loss solutions.
               </p>
               <div className="flex gap-3 mt-4">
-                {[Facebook, Instagram, Youtube].map((Icon, i) => (
-                  <a key={i} href="#" target="_blank" rel="noopener noreferrer"
+                {[
+                  { Icon: Facebook, href: "#" },
+                  { Icon: Instagram, href: "#" },
+                  { Icon: Youtube, href: "#" },
+                  { Icon: Linkedin, href: "https://www.linkedin.com/company/new-you-surgical-weight-loss/" },
+                ].map(({ Icon, href }, i) => (
+                  <a key={i} href={href} target="_blank" rel="noopener noreferrer"
                     className="w-9 h-9 rounded-full bg-white/10 hover:bg-magenta flex items-center justify-center transition-colors">
                     <Icon className="w-4 h-4" />
                   </a>
                 ))}
+                {/* TikTok */}
+                <a href="https://www.tiktok.com/@thebariatricsurgeonstl" target="_blank" rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-magenta flex items-center justify-center transition-colors">
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.19 8.19 0 0 0 4.79 1.53V6.75a4.85 4.85 0 0 1-1.02-.06z"/></svg>
+                </a>
               </div>
             </div>
 
@@ -93,19 +103,31 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 3 — Procedures */}
+            {/* Column 3 — Procedures & Aesthetics */}
             <div>
               <h4 className="font-semibold text-white mb-4">Procedures</h4>
-              <ul className="space-y-2.5 text-sm text-white/70">
+              <ul className="space-y-2.5 text-sm text-white/70 mb-6">
                 {[
                   { label: "Gastric Sleeve", href: "/procedures/gastric-sleeve" },
                   { label: "Gastric Bypass", href: "/procedures/gastric-bypass" },
+                  { label: "Duodenal Switch", href: "/procedures/duodenal-switch" },
+                  { label: "SADI-S", href: "/procedures/sadi-s" },
                   { label: "Revision Surgery", href: "/procedures/revision-surgery" },
+                  { label: "ORBERA® Balloon", href: "/procedures/orbera" },
                   { label: "GLP-1 Program", href: "/glp1" },
-                  { label: "ORBERA® Balloon", href: "/non-surgical" },
-                  { label: "REFRAME Coaching", href: "/reframe" },
-                  { label: "Aesthetics", href: "/aesthetics" },
-                  { label: "Vitamin Store", href: "/vitamins" },
+                  { label: "Non-Surgical Weight Loss", href: "/non-surgical" },
+                ].map(({ label, href }) => (
+                  <li key={label}>
+                    <Link href={href} className="hover:text-white transition-colors">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+              <h4 className="font-semibold text-white mb-3">Aesthetics</h4>
+              <ul className="space-y-2.5 text-sm text-white/70">
+                {[
+                  { label: "Skin Tightening (AccentPrime)", href: "/skin-tightening" },
+                  { label: "Hair Restoration", href: "/hair-restoration" },
+                  { label: "Red Light Therapy", href: "/red-light-therapy" },
                 ].map(({ label, href }) => (
                   <li key={label}>
                     <Link href={href} className="hover:text-white transition-colors">{label}</Link>

@@ -32,6 +32,12 @@ import BookOnline from "@/pages/BookOnline";
 import Quiz from "@/pages/Quiz";
 import VitaminStore from "@/pages/VitaminStore";
 import SupportGroups from "@/pages/SupportGroups";
+import HairRestoration from "@/pages/HairRestoration";
+import SkinTightening from "@/pages/SkinTightening";
+import RedLightTherapy from "@/pages/RedLightTherapy";
+import DuodenalSwitch from "@/pages/DuodenalSwitch";
+import SADIS from "@/pages/SADIS";
+import ORBERA from "@/pages/ORBERA";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -71,6 +77,12 @@ function AppRouter() {
           <Route path="/quiz" component={Quiz} />
           <Route path="/vitamins" component={VitaminStore} />
           <Route path="/support-groups" component={SupportGroups} />
+          <Route path="/hair-restoration" component={HairRestoration} />
+          <Route path="/skin-tightening" component={SkinTightening} />
+          <Route path="/red-light-therapy" component={RedLightTherapy} />
+          <Route path="/procedures/duodenal-switch" component={DuodenalSwitch} />
+          <Route path="/procedures/sadi-s" component={SADIS} />
+          <Route path="/procedures/orbera" component={ORBERA} />
           <Route component={NotFound} />
         </Switch>
       </main>
