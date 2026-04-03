@@ -11,6 +11,23 @@ export default {
         sm: ".1875rem", /* 3px */
       },
       colors: {
+        // Brand colors
+        navy: {
+          DEFAULT: "#1B2A4A",
+          light: "#2A3D66",
+        },
+        magenta: {
+          DEFAULT: "#9B2D6B",
+          light: "#B8408A",
+        },
+        teal: {
+          DEFAULT: "#1A8F9E",
+          light: "#23B5C8",
+        },
+        gold: {
+          DEFAULT: "#C8973E",
+          light: "#D4AA5A",
+        },
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
