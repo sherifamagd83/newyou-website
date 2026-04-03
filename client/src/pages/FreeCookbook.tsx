@@ -100,7 +100,7 @@ export default function FreeCookbook() {
                       >
                         <Download className="w-4 h-4" /> Get My Free Cookbook
                       </button>
-                      <p className="text-[11px] text-center text-muted-foreground">No spam. Unsubscribe anytime. HIPAA compliant.</p>
+                      <p className="text-[11px] text-center text-muted-foreground">By submitting, you consent to receive texts from New You Surgical Weight Loss. Msg & data rates apply. Reply STOP to opt out.</p>
                     </form>
                   </>
                 ) : (

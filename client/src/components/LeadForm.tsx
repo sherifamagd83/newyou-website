@@ -81,7 +81,7 @@ export default function LeadForm({ variant = "hero", title, className = "" }: Pr
         See If You Qualify <ArrowRight className="w-4 h-4" />
       </button>
       <p className={`text-xs mt-3 text-center ${variant === "hero" ? "text-white/50" : "text-muted-foreground"}`}>
-        Your information is confidential. No obligation. HIPAA compliant.
+        By providing your phone number, you consent to receive text messages from New You Surgical Weight Loss regarding your inquiry. Message & data rates may apply. Reply STOP to opt out. No obligation. HIPAA compliant.
       </p>
     </form>
   );

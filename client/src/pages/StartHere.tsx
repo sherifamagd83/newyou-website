@@ -228,7 +228,7 @@ function HealthAssessmentForm() {
               data-testid="button-submit-assessment">
               Submit Your Assessment <ArrowRight className="w-5 h-5" />
             </button>
-            <p className="text-xs text-center text-muted-foreground">100% confidential. HIPAA compliant. No obligation.</p>
+            <p className="text-xs text-center text-muted-foreground">By submitting, you consent to receive texts from New You Surgical Weight Loss. Msg & data rates apply. Reply STOP to opt out. HIPAA compliant.</p>
           </form>
         </ScrollFadeIn>
       </div>

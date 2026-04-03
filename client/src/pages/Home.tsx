@@ -1094,7 +1094,7 @@ function ExitIntentPopup() {
           <Link href="/insurance" onClick={() => setDismissed(true)} className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg w-full justify-center text-base" data-testid="link-exit-intent-insurance">
             Free Insurance Check <ArrowRight className="w-5 h-5" />
           </Link>
-          <p className="text-xs text-muted-foreground mt-4">No obligation. HIPAA compliant. Results in 24 hours.</p>
+          <p className="text-xs text-muted-foreground mt-4">By providing your phone number, you consent to receive texts from New You Surgical Weight Loss. Msg & data rates apply. Reply STOP to opt out. HIPAA compliant.</p>
         </div>
       </div>
     </div>
