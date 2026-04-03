@@ -1,13 +1,26 @@
 import { Link } from "wouter";
-import { ArrowRight, Users, Calendar, Video, MapPin, Heart, MessageCircle, Clock } from "lucide-react";
+import { ArrowRight, MapPin, Heart, Clock } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 const GROUPS = [
-  { title: "Monthly In-Person Support Group", schedule: "First Wednesday of every month, 6:00 PM", location: "New You Surgical Weight Loss — St. Louis Office", type: "In-Person", icon: MapPin, desc: "Join fellow patients and our behavioral health specialist Lora Grabow, LMSW, for guided discussion, accountability, and community. Open to all patients at any stage of their journey." },
-  { title: "Virtual Support Group", schedule: "Third Wednesday of every month, 7:00 PM", location: "Zoom (link sent after registration)", type: "Virtual", icon: Video, desc: "Can't make it in person? Join from home. Same great support, expert guidance, and patient community in a virtual setting." },
-  { title: "Pre-Surgery Preparation Group", schedule: "Second Saturday of every month, 10:00 AM", location: "New You Surgical Weight Loss — St. Louis Office", type: "In-Person", icon: Heart, desc: "For patients preparing for surgery. Learn what to expect, how to prepare, and connect with others who are at the same stage." },
-  { title: "Post-Surgery Nutrition Workshop", schedule: "Fourth Thursday of every month, 5:30 PM", location: "Virtual via Zoom", type: "Virtual", icon: MessageCircle, desc: "Focused on nutrition, meal planning, and healthy eating habits after bariatric surgery. Led by our nutrition team." },
+  { 
+    title: "Monthly Patient Support Group", 
+    schedule: "Third Tuesday of every month · Evening", 
+    location: "New You Surgical Weight Loss — St. Louis Office", 
+    type: "In-Person" as const, 
+    icon: MapPin, 
+    desc: "An evening of conversation, encouragement, and real talk about life before and after weight loss treatment. Open to all patients and anyone considering care through New You. Led by our dietitian or a special guest expert." 
+  },
+];
+
+const TOPICS = [
+  "Handling food choices and meal prep after surgery",
+  "Building a positive relationship with your body",
+  "Staying motivated through plateaus & busy seasons",
+  "Eating well when traveling or socializing",
+  "How to get back on track after a setback",
+  "Community Q&A with our care team",
 ];
 
 export default function SupportGroups() {
@@ -24,10 +37,10 @@ export default function SupportGroups() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollFadeIn className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mb-4">Upcoming Support Groups</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Free for all New You patients. Led by Lora Grabow, LMSW and our care team.</p>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Free for all patients and anyone considering care. Led by our dietitian Nicole Dirnbeck, RD or a special guest expert.</p>
           </ScrollFadeIn>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
             {GROUPS.map((group, i) => (
               <ScrollFadeIn key={group.title} delay={i * 100}>
                 <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition-all h-full">
@@ -51,12 +64,44 @@ export default function SupportGroups() {
                       <span>{group.location}</span>
                     </div>
                   </div>
+                  <p className="text-xs text-muted-foreground mt-3 italic">Free for all patients and anyone considering care. Occasionally we host special workshops with a small fee.</p>
                 </div>
               </ScrollFadeIn>
             ))}
           </div>
 
-          <ScrollFadeIn className="text-center mt-12">
+          {/* Topics We Cover */}
+          <ScrollFadeIn className="mt-14">
+            <h3 className="font-serif text-2xl font-bold text-navy text-center mb-6">Topics We Cover</h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {TOPICS.map((topic) => (
+                <div key={topic} className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm flex items-start gap-3">
+                  <Heart className="w-4 h-4 text-magenta mt-0.5 shrink-0" />
+                  <span className="text-sm text-foreground">{topic}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-6">
+              Questions? Contact our support group host{" "}
+              <a href="mailto:ndirnbeck@nyswl.com" className="text-teal font-medium hover:underline">Nicole Dirnbeck, RD at ndirnbeck@nyswl.com</a>
+            </p>
+          </ScrollFadeIn>
+
+          {/* REFRAME Behavioral Coaching */}
+          <ScrollFadeIn className="mt-14">
+            <div className="bg-navy rounded-2xl p-8 text-white flex flex-col md:flex-row items-start md:items-center gap-6">
+              <div className="flex-1">
+                <span className="text-teal text-xs font-semibold uppercase tracking-wider">Also Available</span>
+                <h3 className="font-serif text-2xl font-bold mt-1 mb-2">REFRAME Behavioral Coaching</h3>
+                <p className="text-white/80 text-sm leading-relaxed">Bi-monthly virtual mindset sessions with Lora Grabow, LMSW — designed to retrain how you think about food, your body, and lasting change.</p>
+              </div>
+              <Link href="/reframe" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all shadow-md shrink-0" data-testid="link-reframe-from-support">
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollFadeIn>
+
+          <ScrollFadeIn className="text-center mt-10">
             <Link href="/book" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-3.5 rounded-full transition-all shadow-md" data-testid="link-register-support-group">
               Register for a Group <ArrowRight className="w-4 h-4" />
             </Link>

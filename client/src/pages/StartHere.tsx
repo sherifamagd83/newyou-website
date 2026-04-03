@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Calculator, CheckCircle2, ArrowRight, Clock, Stethoscope, FileCheck, HeartPulse, Scale, CalendarCheck, TrendingDown } from "lucide-react";
+import { Calculator, CheckCircle2, ArrowRight, Clock, TrendingDown } from "lucide-react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 import PageHero from "@/components/PageHero";
 
@@ -237,30 +237,30 @@ function HealthAssessmentForm() {
 }
 
 function WhatToExpect() {
-  const timeline = [
-    { icon: CalendarCheck, title: "Initial Consultation", desc: "Meet with Dr. Lange for a comprehensive evaluation. We'll discuss your goals and determine the best approach." },
-    { icon: FileCheck, title: "Insurance Verification", desc: "Our team handles all insurance pre-authorization. Most patients are approved within 2-4 weeks." },
-    { icon: Stethoscope, title: "Pre-Op Preparation", desc: "Complete required evaluations: nutritional counseling, psychological assessment, and pre-op testing." },
-    { icon: HeartPulse, title: "Surgery Day", desc: "Minimally invasive, laparoscopic procedures. Most patients go home the same day or next morning." },
-    { icon: Scale, title: "Recovery & Follow-Up", desc: "Structured recovery plan with regular check-ins. Return to most activities within 2-4 weeks." },
-    { icon: CheckCircle2, title: "Lifelong Support", desc: "Monthly support groups, behavioral coaching, nutritional guidance, and annual check-ups for life." },
+  const steps = [
+    { number: 1, title: "Health & History Intake", desc: "We begin by learning about your goals, medical history, and lifestyle to make sure you're a good fit for the program." },
+    { number: 2, title: "In-Person Consultation with Dr. Lange", desc: "You'll meet face-to-face with Dr. Lange to ask questions, discuss your options, and map out your personalized plan." },
+    { number: 3, title: "Insurance Check & Eligibility Review", desc: "We'll verify your insurance coverage and guide you through the requirements to qualify — or help with self-pay options if needed." },
+    { number: 4, title: "Medical Assessments & Insurance Submission", desc: "You'll complete any necessary lab work, clearances, and evaluations, then we submit documentation to your insurance." },
+    { number: 5, title: "Pre-Op Appointment", desc: "We'll walk you through what to expect, answer any last-minute questions, and make sure you're fully prepared." },
+    { number: 6, title: "Surgery Day & Lifelong Support", desc: "Your journey doesn't end at surgery. We're with you every step through recovery, follow-ups, and long-term support." },
   ];
 
   return (
     <section className="section-gradient py-20">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">What to Expect</h2>
-          <p className="text-muted-foreground">Your complete weight loss surgery timeline from first consultation to your new life.</p>
+          <h2 className="font-serif text-3xl font-bold text-navy mb-4">What to Expect: Your 6-Step Process</h2>
+          <p className="text-muted-foreground">Here's exactly what the pre-surgical preparation process looks like, from your first contact to surgery day.</p>
         </ScrollFadeIn>
         <div className="relative">
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-magenta via-teal to-gold hidden sm:block" />
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal via-teal to-teal hidden sm:block" />
           <div className="space-y-8">
-            {timeline.map((step, i) => (
+            {steps.map((step, i) => (
               <ScrollFadeIn key={step.title} delay={i * 100}>
                 <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 rounded-full bg-white border-2 border-magenta flex items-center justify-center shrink-0 relative z-10">
-                    <step.icon className="w-5 h-5 text-magenta" />
+                  <div className="w-12 h-12 rounded-full bg-teal flex items-center justify-center shrink-0 relative z-10 shadow-md">
+                    <span className="text-white font-bold text-lg">{step.number}</span>
                   </div>
                   <div className="bg-white rounded-xl p-5 border shadow-sm flex-1">
                     <h3 className="font-semibold text-navy mb-1">{step.title}</h3>
@@ -271,6 +271,12 @@ function WhatToExpect() {
             ))}
           </div>
         </div>
+        <ScrollFadeIn className="mt-12">
+          <div className="bg-teal rounded-2xl p-8 text-white text-center">
+            <p className="text-xl font-serif font-bold mb-1">This can be a long process — don't get frustrated!</p>
+            <p className="text-2xl font-serif font-bold tracking-wide">YOU ARE WORTH IT!</p>
+          </div>
+        </ScrollFadeIn>
       </div>
     </section>
   );

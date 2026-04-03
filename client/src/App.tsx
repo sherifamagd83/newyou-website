@@ -38,6 +38,9 @@ import RedLightTherapy from "@/pages/RedLightTherapy";
 import DuodenalSwitch from "@/pages/DuodenalSwitch";
 import SADIS from "@/pages/SADIS";
 import ORBERA from "@/pages/ORBERA";
+import FAQs from "@/pages/FAQs";
+import FreeCookbook from "@/pages/FreeCookbook";
+import PatientForms from "@/pages/PatientForms";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -83,6 +86,9 @@ function AppRouter() {
           <Route path="/procedures/duodenal-switch" component={DuodenalSwitch} />
           <Route path="/procedures/sadi-s" component={SADIS} />
           <Route path="/procedures/orbera" component={ORBERA} />
+          <Route path="/faqs" component={FAQs} />
+          <Route path="/free-cookbook" component={FreeCookbook} />
+          <Route path="/patient-forms" component={PatientForms} />
           <Route component={NotFound} />
         </Switch>
       </main>

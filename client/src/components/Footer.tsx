@@ -91,6 +91,9 @@ export default function Footer() {
                   { label: "Patient Portal", href: PRACTICE.portalUrl, external: true },
                   { label: "Online Bill Pay", href: PRACTICE.billPayUrl, external: true },
                   { label: "Vitamin Store", href: PRACTICE.vitaminStoreUrl, external: true },
+                  { label: "FAQs", href: "/faqs" },
+                  { label: "Free Cookbook", href: "/free-cookbook" },
+                  { label: "Patient Forms", href: "/patient-forms" },
                 ].map(({ label, href, external }) => (
                   <li key={label}>
                     {external ? (

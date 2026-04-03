@@ -10,8 +10,8 @@ export default function Reframe() {
         <div className="absolute inset-0"><div className="absolute top-0 left-0 w-[400px] h-[400px] bg-magenta/10 rounded-full blur-3xl" /></div>
         <div className="max-w-3xl mx-auto px-4 relative">
           <img src={img("/images/site/reframe-logo.png")} alt="REFRAME Coaching Program" className="h-16 w-auto mx-auto mb-6" />
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">REFRAME Coaching Program</h1>
-          <p className="text-white/80 text-lg">Behavioral coaching that transforms your mindset — not just your body. Led by Lora Grabow, LMSW.</p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">REFRAME Behavioral Coaching</h1>
+          <p className="text-white/80 text-lg">A virtual, bi-monthly mindset and behavioral support series for people navigating surgical or medical weight loss. Offered in collaboration with Lora Grabow, LMSW.</p>
         </div>
       </section>
 
@@ -19,26 +19,26 @@ export default function Reframe() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollFadeIn>
-              <span className="text-magenta font-semibold text-sm tracking-wider uppercase">The Headwork™ Method</span>
-              <h2 className="font-serif text-3xl font-bold text-navy mt-2 mb-6">Your Mind is the Missing Piece</h2>
+              <span className="text-magenta font-semibold text-sm tracking-wider uppercase">Mindset & Behavioral Support</span>
+              <h2 className="font-serif text-3xl font-bold text-navy mt-2 mb-6">Surgery changes how you eat. REFRAME changes how you think.</h2>
               <p className="text-muted-foreground leading-relaxed text-lg mb-4">
-                Weight loss surgery changes your stomach. REFRAME changes your mind. Our behavioral coaching program addresses the emotional, psychological, and habitual patterns that drive overeating — giving you the tools for lasting success.
+                Each REFRAME session is a guided conversation to retrain your thoughts, rebuild your habits, and reclaim your identity — in a judgment-free, safe space.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Led by Lora Grabow, LMSW — a licensed social worker with 20+ years of experience and creator of the Headwork™ method — REFRAME is the behavioral foundation that makes surgical weight loss permanent.
+                Offered in collaboration with Lora Grabow, LMSW, REFRAME meets virtually on a bi-monthly basis so you can participate from anywhere. No matter where you are in your journey, these sessions are designed to meet you there.
               </p>
               <div className="bg-gray-50 rounded-2xl p-6 border mb-8">
-                <h3 className="font-semibold text-navy mb-4">What's Included</h3>
+                <h3 className="font-semibold text-navy mb-4">What You Get</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "One-on-one behavioral coaching sessions",
-                    "The Headwork™ mindset curriculum",
-                    "Emotional eating identification & strategies",
-                    "Habit restructuring techniques",
-                    "Stress management and coping skills",
-                    "Body image and self-esteem work",
-                    "Relationship with food healing",
-                    "Lifetime access to support groups",
+                    "Bi-monthly virtual group sessions (live)",
+                    "1:1 therapy access with preferred scheduling",
+                    "Special pricing for program participants",
+                    "Community & accountability between sessions",
+                    "Cravings & emotional eating strategies",
+                    "Boundaries and self-talk work",
+                    "Identity and life after rapid change",
+                    "A judgment-free, safe space to grow",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
@@ -67,20 +67,20 @@ export default function Reframe() {
                   </div>
                 </div>
                 <div className="bg-navy rounded-xl p-4 text-white">
-                  <p className="text-sm italic leading-relaxed">"Surgery can change your body, but if you don't change your thinking, the weight comes back. REFRAME gives you the mindset tools for permanent transformation."</p>
-                  <p className="text-xs text-white/60 mt-2">— Lora Grabow</p>
+                  <p className="text-sm italic leading-relaxed">"Surgery changes how you eat. We started REFRAME to change how you think and who you become."</p>
+                  <p className="text-xs text-white/60 mt-2">— Dr. Lange</p>
                 </div>
               </div>
 
               {/* How it integrates */}
               <div className="bg-gray-50 rounded-2xl p-6 border">
-                <h3 className="font-semibold text-navy mb-4">How REFRAME Integrates</h3>
+                <h3 className="font-semibold text-navy mb-4">Who REFRAME Is For</h3>
                 <div className="space-y-4">
                   {[
-                    { icon: Brain, title: "Pre-Surgery", desc: "Build mental readiness and realistic expectations before your procedure." },
-                    { icon: Heart, title: "During Recovery", desc: "Navigate emotional changes, food grief, and identity shifts post-surgery." },
-                    { icon: Users, title: "Long-Term Maintenance", desc: "Monthly support groups and ongoing coaching to prevent relapse." },
-                    { icon: Calendar, title: "Non-Surgical Patients", desc: "Available for GLP-1 and medically supervised weight loss patients too." },
+                    { icon: Brain, title: "Pre-Surgery Patients", desc: "Build the mental habits and emotional readiness before your procedure." },
+                    { icon: Heart, title: "Post-Op Patients", desc: "Navigate new routines, identity shifts, and the emotional side of rapid change." },
+                    { icon: Users, title: "Non-Surgical Clients", desc: "Ready for lifelong change through medical weight loss or GLP-1 therapy." },
+                    { icon: Calendar, title: "Topics We Explore", desc: "Cravings, emotional eating, boundaries, self-talk, and life after rapid change." },
                   ].map(({ icon: Icon, title, desc }) => (
                     <div key={title} className="flex gap-3 items-start">
                       <div className="w-8 h-8 rounded-lg bg-magenta/10 flex items-center justify-center shrink-0">
@@ -118,7 +118,7 @@ export default function Reframe() {
 
       <section className="py-16 bg-white text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">Ready to REFRAME Your Relationship with Food?</h2>
+          <h2 className="font-serif text-3xl font-bold text-navy mb-4">Ready to Change How You Think?</h2>
           <Link href="/request-consultation"
             className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-4 rounded-full transition-all shadow-lg text-lg"
             data-testid="link-reframe-cta">

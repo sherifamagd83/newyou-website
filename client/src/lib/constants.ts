@@ -70,6 +70,7 @@ export const NAV_ITEMS = [
       { label: "Am I a Candidate?", href: "/quiz" },
       { label: "What to Expect", href: "/start-here" },
       { label: "Insurance & Financing", href: "/insurance" },
+      { label: "Patient Forms", href: "/patient-forms" },
     ],
   },
   {
@@ -105,7 +106,8 @@ export const NAV_ITEMS = [
       { label: "Vitamin Store", href: "https://nyswl.myshopify.com/", external: true },
       { label: "Patient Portal", href: "https://mycw217.ecwcloud.com/portal26390/jsp/100mp/login_otp.jsp", external: true },
       { label: "Pay My Bill", href: "https://www.healowpay.com/HealowPay/jsp/healow/login.jsp", external: true },
-      { label: "FAQs", href: "/resources" },
+      { label: "FAQs", href: "/faqs" },
+      { label: "Free Cookbook", href: "/free-cookbook" },
     ],
   },
   { label: "Contact", href: "/contact" },
