@@ -102,7 +102,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-white border-t shadow-xl animate-in slide-in-from-top-2 duration-200">
+          <div className="lg:hidden bg-white border-t shadow-xl animate-in slide-in-from-top-2 duration-200 max-h-[80vh] overflow-y-auto">
             <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1">
               {NAV_ITEMS.map((item) => (
                 <div key={item.label}>
