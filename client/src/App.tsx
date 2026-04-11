@@ -41,6 +41,7 @@ import ORBERA from "@/pages/ORBERA";
 import FAQs from "@/pages/FAQs";
 import FreeCookbook from "@/pages/FreeCookbook";
 import PatientForms from "@/pages/PatientForms";
+import Financing from "@/pages/Financing";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -89,6 +90,7 @@ function AppRouter() {
           <Route path="/faqs" component={FAQs} />
           <Route path="/free-cookbook" component={FreeCookbook} />
           <Route path="/patient-forms" component={PatientForms} />
+          <Route path="/financing" component={Financing} />
           <Route component={NotFound} />
         </Switch>
       </main>

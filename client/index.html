@@ -13,5 +13,51 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- CHERRY FLOATING ESTIMATOR -->
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap' rel='stylesheet' />
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+            w[o] = w[o] || function () {
+                (w[o].q = w[o].q || []).push(arguments);
+            };
+            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+        _hw("init", {
+            debug: false,
+            variables: {
+                slug: 'new-you-surgical-weight-loss',
+                name: 'NEW YOU SURGICAL WEIGHT LOSS',
+                images: [37],
+                customLogo: '',
+                defaultPurchaseAmount: 5000,
+                customImage: '',
+                imageCategory: 'plastics',
+                language: 'en',
+            },
+            styles: {
+                primaryColor: '#936C56',
+                secondaryColor: '#936C5610',
+                fontFamily: 'Montserrat',
+                headerFontFamily: 'Montserrat',
+                floatingEstimator: {
+                    position: 'bottom-right',
+                    offset: {
+                        x: '0px',
+                        y: '70px'
+                    },
+                    zIndex: 9999,
+                    ctaFontFamily: 'Montserrat',
+                    bodyFontFamily: 'Montserrat',
+                    ctaColor: '#936C56',
+                    ctaTextColor: '#FFFFFF'
+                }
+            }
+        }, ['floatingEstimator']);
+    </script>
+    <div id="floatingEstimator"></div>
   </body>
 </html>

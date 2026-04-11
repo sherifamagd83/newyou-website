@@ -69,7 +69,7 @@ export const NAV_ITEMS = [
     children: [
       { label: "Am I a Candidate?", href: "/quiz" },
       { label: "What to Expect", href: "/start-here" },
-      { label: "Insurance & Financing", href: "/insurance" },
+      { label: "Financing & Insurance", href: "/financing" },
       { label: "Patient Forms", href: "/patient-forms" },
     ],
   },

@@ -10,6 +10,31 @@ export default function Insurance() {
     <div>
       <PageHero image="/images/hero/hero-surgery.jpg" title="Insurance & Financing" subtitle="We accept all major insurance carriers and offer flexible financing options." />
 
+      <section className="py-10 bg-gradient-to-r from-[#936C56]/10 to-[#936C56]/5">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <ScrollFadeIn>
+            <h2 className="font-serif text-2xl font-bold text-navy mb-3">Cherry Patient Financing — Our Preferred Partner</h2>
+            <p className="text-muted-foreground mb-6">Treat now, pay later. No hard credit checks. Plans starting at 0% APR. Get pre-approved in minutes.</p>
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              {[
+                "No hard credit check to apply",
+                "Plans starting at 0% APR",
+                "Approvals up to $10,000+",
+                "Quick 30-second application",
+              ].map((item) => (
+                <span key={item} className="flex items-center gap-2 text-sm bg-white px-4 py-2 rounded-full shadow-sm">
+                  <CheckCircle2 className="w-4 h-4 text-[#936C56]" />
+                  {item}
+                </span>
+              ))}
+            </div>
+            <Link href="/financing" className="inline-flex items-center gap-2 bg-[#936C56] hover:opacity-90 text-white font-semibold px-8 py-3.5 rounded-full transition-all shadow-md">
+              View Payment Plans <ArrowRight className="w-4 h-4" />
+            </Link>
+          </ScrollFadeIn>
+        </div>
+      </section>
+
       <InsuranceVerificationForm />
 
       <section className="py-20 bg-white">

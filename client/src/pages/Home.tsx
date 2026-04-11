@@ -916,6 +916,9 @@ function InsurancePricing() {
                 ))}
               </div>
 
+              <Link href="/financing" className="block w-full text-center bg-[#936C56] hover:opacity-90 text-white font-bold py-3 rounded-xl transition-all mb-3">
+                Cherry Payment Plans →
+              </Link>
               <Link
                 href="/insurance"
                 className="inline-flex items-center justify-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg shadow-magenta/30 text-sm uppercase tracking-wide w-full"

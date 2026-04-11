@@ -85,6 +85,7 @@ export default function Footer() {
                   { label: "Start Here", href: "/start-here" },
                   { label: "Request Consultation", href: "/request-consultation" },
                   { label: "Meet Dr. Lange", href: "/dr-lange" },
+                  { label: "Financing (Cherry)", href: "/financing" },
                   { label: "Insurance & Financing", href: "/insurance" },
                   { label: "Am I a Candidate? Quiz", href: "/quiz" },
                   { label: "Support Groups", href: "/support-groups" },
