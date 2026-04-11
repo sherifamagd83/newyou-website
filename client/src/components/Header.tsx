@@ -21,6 +21,23 @@ export default function Header() {
     setOpenDropdown(null);
   }, [location]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${window.scrollY}px`;
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    }
+  }, [mobileOpen]);
+
   return (
     <>
       {/* Top announcement bar */}
@@ -108,7 +125,7 @@ export default function Header() {
           {/* Backdrop */}
           <div className="absolute inset-0 bg-black/30" onClick={() => setMobileOpen(false)} />
           {/* Menu panel */}
-          <div className="absolute top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl overflow-y-auto -webkit-overflow-scrolling-touch">
+          <div className="absolute top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl overflow-y-auto" style={{ WebkitOverflowScrolling: "touch", overscrollBehavior: "contain" }}>
             <div className="flex items-center justify-between px-4 py-4 border-b">
               <span className="font-serif font-bold text-navy">Menu</span>
               <button onClick={() => setMobileOpen(false)} className="p-2">
