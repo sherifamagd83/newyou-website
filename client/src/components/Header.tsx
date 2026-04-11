@@ -100,13 +100,25 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <div className="lg:hidden bg-white border-t shadow-xl animate-in slide-in-from-top-2 duration-200 max-h-[80vh] overflow-y-auto">
-            <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1">
+      </header>
+
+      {/* Mobile menu — fixed overlay so iOS scroll works */}
+      {mobileOpen && (
+        <div className="fixed inset-0 z-[60] lg:hidden" data-testid="mobile-menu-overlay">
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/30" onClick={() => setMobileOpen(false)} />
+          {/* Menu panel */}
+          <div className="absolute top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl overflow-y-auto -webkit-overflow-scrolling-touch">
+            <div className="flex items-center justify-between px-4 py-4 border-b">
+              <span className="font-serif font-bold text-navy">Menu</span>
+              <button onClick={() => setMobileOpen(false)} className="p-2">
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <nav className="px-4 py-4 space-y-1 pb-32">
               {NAV_ITEMS.map((item) => (
                 <div key={item.label}>
-                  <Link href={item.href}
+                  <Link href={item.href} onClick={() => setMobileOpen(false)}
                     className="block px-3 py-2.5 text-base font-medium rounded-lg hover:bg-gray-50 transition-colors">
                     {item.label}
                   </Link>
@@ -115,11 +127,12 @@ export default function Header() {
                       {item.children.map((child) => (
                         (child as any).external || child.href.startsWith("http") ? (
                           <a key={child.href} href={child.href} target="_blank" rel="noopener noreferrer"
+                            onClick={() => setMobileOpen(false)}
                             className="block px-3 py-2 text-sm text-muted-foreground hover:text-magenta transition-colors">
                             {child.label}
                           </a>
                         ) : (
-                          <Link key={child.href} href={child.href}
+                          <Link key={child.href} href={child.href} onClick={() => setMobileOpen(false)}
                             className="block px-3 py-2 text-sm text-muted-foreground hover:text-magenta transition-colors">
                             {child.label}
                           </Link>
@@ -133,15 +146,15 @@ export default function Header() {
                 <a href={PRACTICE.phoneLink} className="flex items-center gap-2 px-3 py-2 font-semibold text-navy">
                   <Phone className="w-4 h-4" /> {PRACTICE.phone}
                 </a>
-                <Link href="/book"
+                <Link href="/book" onClick={() => setMobileOpen(false)}
                   className="block text-center bg-magenta text-white font-semibold px-5 py-3 rounded-full">
                   Book Now
                 </Link>
               </div>
             </nav>
           </div>
-        )}
-      </header>
+        </div>
+      )}
     </>
   );
 }
