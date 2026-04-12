@@ -9,7 +9,7 @@ export default function Reframe() {
       <section className="hero-gradient py-16 md:py-24 text-center relative overflow-hidden">
         <div className="absolute inset-0"><div className="absolute top-0 left-0 w-[400px] h-[400px] bg-magenta/10 rounded-full blur-3xl" /></div>
         <div className="max-w-3xl mx-auto px-4 relative">
-          <img src={img("/images/site/reframe-logo.png")} alt="REFRAME Coaching Program" className="h-16 w-auto mx-auto mb-6" />
+          <div className="w-16 h-16 rounded-2xl bg-magenta/10 flex items-center justify-center mx-auto mb-6"><Brain className="w-8 h-8 text-magenta" /></div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">REFRAME Behavioral Coaching</h1>
           <p className="text-white/80 text-lg">A virtual, bi-monthly mindset and behavioral support series for people navigating surgical or medical weight loss. Offered in collaboration with Lora Grabow, LMSW.</p>
         </div>
