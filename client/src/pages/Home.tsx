@@ -873,6 +873,7 @@ function InsurancePricing() {
                 "CareCredit financing available",
                 "Plans as low as $300/month",
                 "No-obligation cost estimate",
+                "Cash pay from $15,000 — schedule in 30 days",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-teal shrink-0" />
@@ -916,6 +917,11 @@ function InsurancePricing() {
                 ))}
               </div>
 
+              <div className="border-t border-white/10 mt-4 pt-4 mb-4">
+                <p className="text-white/50 text-xs uppercase tracking-wider mb-1">Cash Pay Option</p>
+                <p className="text-white text-lg font-bold">From $15,000</p>
+                <p className="text-white/60 text-xs">Surgery in as little as 30 days · CareCredit available</p>
+              </div>
               <Link href="/financing" className="block w-full text-center bg-[#936C56] hover:opacity-90 text-white font-bold py-3 rounded-xl transition-all mb-3">
                 Cherry Payment Plans →
               </Link>

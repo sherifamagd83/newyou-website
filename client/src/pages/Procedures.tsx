@@ -91,6 +91,28 @@ export default function Procedures() {
         </div>
       </section>
 
+      {/* Cash Pay Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <ScrollFadeIn>
+            <section className="py-12 bg-navy rounded-2xl px-8 text-center mb-12">
+              <h3 className="font-serif text-2xl font-bold text-white mb-3">No Insurance? Cash Pay Gets You in Fast.</h3>
+              <p className="text-white/70 max-w-xl mx-auto mb-4">Skip the approval process. Cash pay patients can schedule surgery in as little as 30 days. Transparent pricing, CareCredit financing available.</p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
+                <span>Gastric Sleeve: from $15,000</span>
+                <span>·</span>
+                <span>Gastric Bypass: from $18,000</span>
+                <span>·</span>
+                <span>CareCredit from $300/mo</span>
+              </div>
+              <Link href="/financing" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all mt-6">
+                Explore Financing Options <ArrowRight className="w-4 h-4" />
+              </Link>
+            </section>
+          </ScrollFadeIn>
+        </div>
+      </section>
+
       {/* Which procedure quiz */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 text-center">

@@ -113,7 +113,11 @@ export default function SADIS() {
                     <div className="flex justify-between pb-2 border-b"><span className="text-muted-foreground">Hospital Stay</span><span className="font-semibold">2–3 nights</span></div>
                     <div className="flex justify-between pb-2 border-b"><span className="text-muted-foreground">Recovery</span><span className="font-semibold">1–4 weeks</span></div>
                     <div className="flex justify-between pb-2 border-b"><span className="text-muted-foreground">Weight Loss</span><span className="font-semibold text-magenta">Up to 100% EWL</span></div>
-                    <div className="flex justify-between"><span className="text-muted-foreground">Insurance</span><span className="font-semibold">Case by case</span></div>
+                    <div className="flex justify-between pb-2 border-b"><span className="text-muted-foreground">Insurance</span><span className="font-semibold">Case by case</span></div>
+                    <div className="flex justify-between py-2 border-b border-gray-100">
+                      <span className="text-muted-foreground text-sm">Cash Pay</span>
+                      <span className="font-semibold text-sm">From $15,000</span>
+                    </div>
                   </div>
                 </div>
                 <LeadForm variant="sidebar" title="See If You Qualify" />
