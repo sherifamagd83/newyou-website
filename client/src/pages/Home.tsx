@@ -3,7 +3,7 @@ import {
   Star, ArrowRight, Phone, Shield, Users, HeartPulse, Clock, Award,
   Minimize2, GitBranch, RefreshCw, Pill, Circle, Sparkles,
   ChevronLeft, ChevronRight, Play, Calculator, Activity, TrendingDown,
-  CheckCircle2, Heart, Building2,
+  CheckCircle2, Heart, Building2, Zap,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ScrollFadeIn from "@/components/ScrollFadeIn";
@@ -23,6 +23,7 @@ export default function Home() {
       <QuizCTA />
       <TransformationsCarousel />
       <DrLangeSection />
+      <PostOpJourney />
       <InsurancePricing />
       <ReviewsCarousel />
       <FinalCTA />
@@ -837,6 +838,67 @@ function DrLangeSection() {
             </Link>
           </ScrollFadeIn>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* =============================================
+   POST-OP JOURNEY TIMELINE
+   ============================================= */
+function PostOpJourney() {
+  const steps = [
+    { week: "Week 1", title: "Surgery & Recovery", desc: "Laparoscopic procedure. 1-2 night hospital stay. Walking the same day. Liquid diet begins.", icon: Heart, color: "bg-magenta" },
+    { week: "Weeks 2-4", title: "Healing & Adaptation", desc: "Transition to pureed foods. Follow-up with Dr. Lange. Energy starts returning. First weigh-in milestones.", icon: Activity, color: "bg-teal" },
+    { week: "Months 2-6", title: "Rapid Weight Loss", desc: "Most dramatic changes happen here. Advance to regular foods. Monthly check-ins. Lab work at 3 months. Clothes sizes dropping fast.", icon: TrendingDown, color: "bg-navy" },
+    { week: "Months 6-12", title: "Transformation", desc: "Approaching goal weight. Comorbidities improving or resolved. Exercise routine established. InBody composition tracking.", icon: Zap, color: "bg-gold" },
+    { week: "Year 1+", title: "New Life & Maintenance", desc: "One year celebration. Long-term care plan. Membership options for ongoing support. Maintenance nutrition. Support groups.", icon: Star, color: "bg-magenta" },
+  ];
+
+  return (
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-4">
+        <ScrollFadeIn className="text-center mb-14">
+          <span className="text-xs font-bold tracking-[0.2em] uppercase text-magenta mb-2 block">Your Transformation Timeline</span>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mb-4">Your Post-Op Journey</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">From surgery day to your new life — here's what to expect at every stage.</p>
+        </ScrollFadeIn>
+
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2 hidden md:block" />
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-200 md:hidden" />
+
+          <div className="space-y-8 md:space-y-12">
+            {steps.map((step, i) => (
+              <ScrollFadeIn key={step.week} delay={i * 100}>
+                <div className={`flex items-start gap-6 md:gap-12 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
+                  {/* Content */}
+                  <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"} pl-16 md:pl-0`}>
+                    <span className="text-xs font-bold tracking-wider uppercase text-muted-foreground">{step.week}</span>
+                    <h3 className="font-serif text-xl font-bold text-navy mt-1 mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+
+                  {/* Icon circle */}
+                  <div className={`absolute left-6 md:relative md:left-auto w-12 h-12 rounded-full ${step.color} flex items-center justify-center shrink-0 shadow-lg -translate-x-1/2 md:translate-x-0`}>
+                    <step.icon className="w-5 h-5 text-white" />
+                  </div>
+
+                  {/* Spacer for alternating layout */}
+                  <div className="hidden md:block flex-1" />
+                </div>
+              </ScrollFadeIn>
+            ))}
+          </div>
+        </div>
+
+        <ScrollFadeIn className="text-center mt-14">
+          <div className="bg-navy/5 rounded-2xl p-6 inline-block">
+            <p className="text-navy font-semibold mb-1">You're never alone on this journey.</p>
+            <p className="text-sm text-muted-foreground">Dr. Lange and the New You team support you at every stage — from pre-op through lifetime maintenance.</p>
+          </div>
+        </ScrollFadeIn>
       </div>
     </section>
   );
