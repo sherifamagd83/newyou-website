@@ -144,7 +144,7 @@ export default function DrLange() {
       <section className="py-16 bg-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="font-serif text-3xl font-bold text-navy mb-4">Ready to Meet Dr. Lange?</h2>
-          <p className="text-muted-foreground mb-8">Schedule a free, no-obligation consultation to discuss your weight loss goals.</p>
+          <p className="text-muted-foreground mb-8">Schedule a no-obligation consultation to discuss your weight loss goals.</p>
           <Link href="/request-consultation"
             className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-4 rounded-full transition-all shadow-lg text-lg"
             data-testid="link-dr-lange-cta">
