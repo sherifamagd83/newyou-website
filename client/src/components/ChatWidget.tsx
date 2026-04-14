@@ -115,7 +115,7 @@ export default function ChatWidget() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-20 sm:bottom-6 right-4 z-50 w-14 h-14 bg-navy hover:bg-navy-light text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-105"
+          className="fixed bottom-20 sm:bottom-6 left-4 z-50 w-14 h-14 bg-navy hover:bg-navy-light text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-105"
           data-testid="chat-toggle"
           aria-label="Open chat"
         >
@@ -126,7 +126,7 @@ export default function ChatWidget() {
       {/* Chat window */}
       {open && (
         <div
-          className="fixed bottom-20 sm:bottom-6 right-4 z-50 w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden"
+          className="fixed bottom-20 sm:bottom-6 left-4 z-50 w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden"
           style={{ height: "500px", maxHeight: "calc(100vh - 120px)" }}
         >
           {/* Header */}
