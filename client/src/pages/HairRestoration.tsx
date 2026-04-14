@@ -45,7 +45,7 @@ function HairLeadForm() {
         <CheckCircle2 className="w-16 h-16 text-teal mx-auto mb-4" />
         <h3 className="text-xl font-bold text-navy mb-2">Request Received!</h3>
         <p className="text-muted-foreground">
-          Our team will contact you within 24 hours to schedule your free scalp evaluation.
+          Our team will contact you within 24 hours to schedule your complimentary scalp evaluation.
         </p>
       </div>
     );
@@ -62,7 +62,7 @@ function HairLeadForm() {
     >
       <div>
         <h3 className="font-serif text-xl font-bold text-navy mb-1">
-          Book Your Free Scalp Evaluation
+          Book Your Scalp Evaluation
         </h3>
         <p className="text-sm text-muted-foreground">
           No cost, no commitment. We'll assess your situation and build your plan.
@@ -129,7 +129,7 @@ function HairLeadForm() {
         className="w-full bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl text-base"
         data-testid="button-hair-submit"
       >
-        Request Free Evaluation <ArrowRight className="w-4 h-4" />
+        Book Your Evaluation <ArrowRight className="w-4 h-4" />
       </button>
 
       <p className="text-xs text-center text-muted-foreground flex items-center justify-center gap-1.5">
@@ -254,7 +254,7 @@ export default function HairRestoration() {
             {[
               {
                 step: "1",
-                title: "Free Evaluation",
+                title: "Complimentary Evaluation",
                 desc: "Our team assesses your scalp health, thinning patterns, and medical history. You leave with a personalized treatment plan and clear pricing.",
                 color: "bg-navy/5",
                 accent: "text-navy",
@@ -434,7 +434,7 @@ export default function HairRestoration() {
           <ScrollFadeIn className="text-center mb-12">
             <span className="inline-block text-magenta font-semibold text-sm uppercase tracking-wide mb-2">Transparent Pricing</span>
             <h2 className="font-serif text-3xl font-bold text-navy mb-3">Treatment Packages</h2>
-            <p className="text-muted-foreground">Clear pricing, no surprises. Every package starts with a free scalp evaluation.</p>
+            <p className="text-muted-foreground">Clear pricing, no surprises. Every package starts with a complimentary scalp evaluation.</p>
           </ScrollFadeIn>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -543,7 +543,7 @@ export default function HairRestoration() {
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            Payment plans available. Your exact treatment plan and pricing will be confirmed during your free evaluation.
+            Payment plans available. Your exact treatment plan and pricing will be confirmed during your complimentary evaluation.
           </p>
         </div>
       </section>
@@ -674,7 +674,7 @@ export default function HairRestoration() {
           <ScrollFadeIn>
             <h2 className="font-serif text-3xl font-bold text-navy mb-3">Choose Your Evaluation Time</h2>
             <p className="text-muted-foreground mb-8">
-              Select a date and time. In-person at our St. Louis office or virtual consultation via telehealth. Free, no obligation.
+              Select a date and time. In-person at our St. Louis office or virtual consultation via telehealth. No obligation.
             </p>
             <div className="bg-white rounded-2xl border shadow-sm p-10 text-muted-foreground text-sm">
               <div className="text-4xl mb-3">📅</div>
@@ -811,7 +811,7 @@ export default function HairRestoration() {
                 },
                 {
                   q: "How many sessions do I need?",
-                  a: "3 sessions spaced one month apart is standard. After the initial series, maintenance sessions every 3–6 months sustain results. Your plan is customized during the free evaluation.",
+                  a: "3 sessions spaced one month apart is standard. After the initial series, maintenance sessions every 3–6 months sustain results. Your plan is customized during the complimentary evaluation.",
                 },
                 {
                   q: "When will I see results?",
@@ -844,7 +844,7 @@ export default function HairRestoration() {
             <h2 className="font-serif text-4xl font-bold mb-4">Your Hair Can Grow Back.</h2>
             <p className="font-serif text-2xl text-white/70 mb-4">Let's Make It Happen.</p>
             <p className="text-white/70 text-lg mb-8">
-              Book your free scalp evaluation. No cost, no commitment — just a conversation about your options with a team that understands hair loss from the inside out.
+              Book your complimentary scalp evaluation. No cost, no commitment — just a conversation about your options with a team that understands hair loss from the inside out.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -852,7 +852,7 @@ export default function HairRestoration() {
                 className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-xl text-lg"
                 data-testid="btn-hair-final-cta"
               >
-                Book Free Evaluation <ArrowRight className="w-5 h-5" />
+                Book Your Evaluation <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:3148877605"

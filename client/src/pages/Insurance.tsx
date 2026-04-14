@@ -39,7 +39,7 @@ export default function Insurance() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <ScrollFadeIn className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mb-4">Free Insurance Verification</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mb-4">Complimentary Insurance Verification</h2>
             <p className="text-muted-foreground text-lg">Find out if your plan covers weight loss surgery. Results in 24 hours.</p>
           </ScrollFadeIn>
           <div className="grid lg:grid-cols-[1fr_380px] gap-10 items-start">
@@ -234,7 +234,7 @@ function InsuranceVerificationForm() {
     <div className="bg-white rounded-3xl border-2 border-gray-100 shadow-xl p-6 md:p-8">
       <div className="text-center mb-6">
         <Shield className="w-10 h-10 text-magenta mx-auto mb-3" />
-        <h3 className="font-serif text-xl font-bold text-navy mb-1">Free Insurance Verification</h3>
+        <h3 className="font-serif text-xl font-bold text-navy mb-1">Complimentary Insurance Verification</h3>
         <p className="text-sm text-muted-foreground">Results in 24 hours. Zero obligation.</p>
       </div>
 

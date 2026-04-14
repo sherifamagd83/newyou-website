@@ -84,7 +84,7 @@ export default function Quiz() {
   };
 
   const getResult = () => {
-    if (totalScore >= 8) return { title: "Strong Candidate for Surgery", desc: "Based on your answers, you may be an excellent candidate for bariatric surgery. Dr. Lange can help you explore gastric sleeve, bypass, or other surgical options.", color: "text-green-600", bg: "bg-green-50", borderColor: "border-green-200", cta: "Schedule Free Consultation", href: "/book" };
+    if (totalScore >= 8) return { title: "Strong Candidate for Surgery", desc: "Based on your answers, you may be an excellent candidate for bariatric surgery. Dr. Lange can help you explore gastric sleeve, bypass, or other surgical options.", color: "text-green-600", bg: "bg-green-50", borderColor: "border-green-200", cta: "Schedule Your Consultation", href: "/book" };
     if (totalScore >= 5) return { title: "Good Candidate — Multiple Options", desc: "You may qualify for both surgical and non-surgical weight loss programs. A consultation with Dr. Lange will help determine the best path for your goals.", color: "text-teal", bg: "bg-teal/5", borderColor: "border-teal/20", cta: "Explore Your Options", href: "/book" };
     return { title: "Non-Surgical Options Available", desc: "Based on your answers, our GLP-1/Semaglutide program or medically supervised weight loss may be the best fit. These are effective, proven programs.", color: "text-blue-600", bg: "bg-blue-50", borderColor: "border-blue-200", cta: "Learn About GLP-1 Program", href: "/glp1" };
   };
@@ -96,7 +96,7 @@ export default function Quiz() {
     <div>
       <PageHero
         image="/images/hero/hero-surgery.jpg"
-        badge="Free Assessment"
+        badge="No-Obligation Assessment"
         title="Am I a Candidate?"
         subtitle="Take our 2-minute quiz to find out which weight loss option is right for you."
       />

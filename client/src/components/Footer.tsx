@@ -19,7 +19,7 @@ export default function Footer() {
             <Link href="/request-consultation"
               className="bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-4 rounded-full text-lg transition-all shadow-lg hover:shadow-xl inline-block"
               data-testid="link-footer-cta-consultation">
-              Request Free Consultation
+              Request a Consultation
             </Link>
             <a href={PRACTICE.phoneLink}
               className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all border border-white/20 inline-flex items-center justify-center gap-2"

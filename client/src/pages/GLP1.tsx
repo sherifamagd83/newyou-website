@@ -212,7 +212,7 @@ function HowItWorks() {
   const steps = [
     {
       num: "1",
-      title: "Free Consultation",
+      title: "No-Obligation Consultation",
       desc: "Meet Dr. Lange (in-person or virtual). We assess your health, goals, and determine if GLP-1 is right for you.",
     },
     {
@@ -362,7 +362,7 @@ function PricingSection() {
 
         <ScrollFadeIn>
           <p className="text-center text-xs text-muted-foreground max-w-xl mx-auto">
-            Medication cost is separate and varies by pharmacy and insurance. Some plans cover GLP-1 medications. Our team can help navigate coverage. The consultation is free with zero obligation.
+            Medication cost is separate and varies by pharmacy and insurance. Some plans cover GLP-1 medications. Our team can help navigate coverage. The consultation carries zero obligation.
           </p>
         </ScrollFadeIn>
       </div>
@@ -374,8 +374,8 @@ function PricingSection() {
 function MilestoneRewards() {
   const milestones = [
     { lbs: "25 lbs", reward: "$25 vitamin store credit", icon: Gift },
-    { lbs: "50 lbs", reward: "Free red light therapy session", icon: Sparkles },
-    { lbs: "75 lbs", reward: "Free hair restoration evaluation", icon: Zap },
+    { lbs: "50 lbs", reward: "Complimentary red light therapy session", icon: Sparkles },
+    { lbs: "75 lbs", reward: "Complimentary hair restoration evaluation", icon: Zap },
     { lbs: "100 lbs", reward: "$100 referral bonus unlocked", icon: Star },
   ];
 
@@ -467,7 +467,7 @@ function ComparisonTable() {
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            Not sure? That's exactly what the free consultation is for.{" "}
+            Not sure? That's exactly what the no-obligation consultation is for.{" "}
             <Link
               href="/request-consultation"
               className="text-teal font-semibold hover:underline"
@@ -586,7 +586,7 @@ function GLP1FAQs() {
     },
     {
       q: "Am I a candidate?",
-      a: "Generally, candidates have a BMI of 30+ or 27+ with at least one weight-related condition (high blood pressure, type 2 diabetes, high cholesterol). The free consultation determines if GLP-1 is right for you.",
+      a: "Generally, candidates have a BMI of 30+ or 27+ with at least one weight-related condition (high blood pressure, type 2 diabetes, high cholesterol). The no-obligation consultation determines if GLP-1 is right for you.",
     },
     {
       q: "What are the side effects?",
@@ -669,14 +669,14 @@ function PatientsAlsoExplore() {
       icon: Zap,
       title: "Hair Restoration",
       desc: "Weight loss can trigger temporary shedding. Our needle-free ALMA TED treatment restores density.",
-      detail: "Free scalp evaluation",
+      detail: "Complimentary scalp evaluation",
       href: "/hair-restoration",
     },
     {
       icon: Heart,
       title: "Bariatric Surgery",
       desc: "For patients who need more significant weight loss. Dr. Lange offers the full spectrum: sleeve, bypass, and more.",
-      detail: "Free consultation",
+      detail: "No-obligation consultation",
       href: "/bariatric-surgery",
     },
   ];
@@ -782,7 +782,7 @@ function MembershipCallout() {
               You Deserve a Body That Matches How Hard You're Trying.
             </h2>
             <p className="text-white/70 mb-8 max-w-xl mx-auto">
-              Your free consultation with Dr. Lange is waiting. No obligation. No pressure. In-person or telehealth.
+              Your no-obligation consultation with Dr. Lange is waiting. No pressure. In-person or telehealth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -790,7 +790,7 @@ function MembershipCallout() {
                 className="inline-flex items-center justify-center gap-2 bg-magenta hover:bg-magenta/90 text-white font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg"
                 data-testid="button-final-cta-glp1"
               >
-                Book Free Consultation <ArrowRight className="w-4 h-4" />
+                Book Your Consultation <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="tel:3148877605"

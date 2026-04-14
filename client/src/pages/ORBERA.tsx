@@ -142,7 +142,7 @@ export default function ORBERA() {
           <ScrollFadeIn className="text-center mb-10">
             <h2 className="font-serif text-3xl font-bold text-navy mb-4">Ready to Learn More?</h2>
             <p className="text-muted-foreground text-lg">
-              ORBERA is ideal for patients with a BMI of 30–40 who want to lose weight without surgery. Schedule a free consultation to find out if you're a candidate.
+              ORBERA is ideal for patients with a BMI of 30–40 who want to lose weight without surgery. Schedule a no-obligation consultation to find out if you're a candidate.
             </p>
           </ScrollFadeIn>
           <ScrollFadeIn>

@@ -73,12 +73,12 @@ function FAQSection() {
 
   const sections: Record<string, { q: string; a: string }[]> = {
     "Preparation": [
-      { q: "How do I know if I qualify for surgery?", a: "Generally, patients with a BMI of 40+ or BMI 35+ with obesity-related conditions qualify. Schedule a free consultation for a personalized evaluation." },
+      { q: "How do I know if I qualify for surgery?", a: "Generally, patients with a BMI of 40+ or BMI 35+ with obesity-related conditions qualify. Schedule a no-obligation consultation for a personalized evaluation." },
       { q: "What tests are required before surgery?", a: "Pre-op testing typically includes blood work, EKG, chest X-ray, psychological evaluation, nutritional counseling, and sometimes a sleep study." },
       { q: "How long does the approval process take?", a: "Insurance approval typically takes 2-6 weeks. Our team handles all pre-authorization paperwork for you." },
     ],
     "Insurance": [
-      { q: "Does insurance cover weight loss surgery?", a: "Most major insurance plans cover bariatric surgery when medical criteria are met. We offer free insurance verification." },
+      { q: "Does insurance cover weight loss surgery?", a: "Most major insurance plans cover bariatric surgery when medical criteria are met. We offer complimentary insurance verification." },
       { q: "What if my insurance doesn't cover it?", a: "We offer competitive self-pay pricing and CareCredit financing with plans as low as $300/month." },
     ],
     "Recovery": [

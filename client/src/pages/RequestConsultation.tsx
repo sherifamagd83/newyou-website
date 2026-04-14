@@ -28,7 +28,7 @@ export default function RequestConsultation() {
 
   return (
     <div>
-      <PageHero image="/images/hero/hero-surgery.jpg" badge="Free Consultation" title="Request a Consultation" subtitle="Take the first step toward your new life. Fill out the form below and our team will contact you within 24 hours." />
+      <PageHero image="/images/hero/hero-surgery.jpg" badge="No-Obligation Consultation" title="Request a Consultation" subtitle="Take the first step toward your new life. Fill out the form below and our team will contact you within 24 hours." />
 
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
@@ -197,7 +197,7 @@ export default function RequestConsultation() {
                   <CheckCircle2 className="w-20 h-20 text-green-500 mx-auto mb-6" />
                   <h2 className="font-serif text-3xl font-bold text-navy mb-4">Request Submitted!</h2>
                   <p className="text-muted-foreground text-lg mb-8">
-                    Thank you, {formData.firstName}! Our team will review your information and reach out within 24 hours to schedule your free consultation.
+                    Thank you, {formData.firstName}! Our team will review your information and reach out within 24 hours to schedule your no-obligation consultation.
                   </p>
                   <div className="bg-gray-50 rounded-2xl p-6 border text-left max-w-md mx-auto">
                     <h3 className="font-semibold text-navy mb-3">What Happens Next?</h3>

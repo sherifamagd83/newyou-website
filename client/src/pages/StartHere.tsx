@@ -110,7 +110,7 @@ function BMICalculator() {
                         <Link href="/request-consultation"
                           className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all text-sm shadow-md"
                           data-testid="link-bmi-consultation">
-                          Schedule Free Assessment <ArrowRight className="w-4 h-4" />
+                          Schedule Your Assessment <ArrowRight className="w-4 h-4" />
                         </Link>
                       </div>
                     </div>
@@ -181,7 +181,7 @@ function HealthAssessmentForm() {
       <div className="max-w-3xl mx-auto px-4">
         <ScrollFadeIn className="text-center mb-12">
           <span className="text-magenta font-semibold text-sm tracking-wider uppercase">Step 3</span>
-          <h2 className="font-serif text-3xl font-bold text-navy mt-2 mb-4">Free Health Assessment</h2>
+          <h2 className="font-serif text-3xl font-bold text-navy mt-2 mb-4">No-Obligation Health Assessment</h2>
           <p className="text-muted-foreground">Complete this confidential assessment and our team will evaluate your candidacy at no cost.</p>
         </ScrollFadeIn>
         <ScrollFadeIn>

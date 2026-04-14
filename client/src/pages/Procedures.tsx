@@ -122,7 +122,7 @@ export default function Procedures() {
             <Link href="/request-consultation"
               className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-4 rounded-full transition-all shadow-lg text-lg"
               data-testid="link-procedures-cta">
-              Schedule a Free Consultation <ArrowRight className="w-5 h-5" />
+              Schedule a Consultation <ArrowRight className="w-5 h-5" />
             </Link>
           </ScrollFadeIn>
         </div>

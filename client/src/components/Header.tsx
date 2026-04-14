@@ -55,7 +55,7 @@ export default function Header() {
             className="bg-magenta hover:bg-magenta-light text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full transition-all flex items-center gap-1.5"
             data-testid="link-free-insurance-check">
             <Shield className="w-3.5 h-3.5" />
-            FREE INSURANCE CHECK
+            COMPLIMENTARY INSURANCE CHECK
           </Link>
         </div>
       </div>

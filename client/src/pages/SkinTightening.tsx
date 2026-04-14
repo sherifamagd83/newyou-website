@@ -86,7 +86,7 @@ export default function SkinTightening() {
                   Complimentary Consultation
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-2">
-                  Free Body Contouring Consultation
+                  Complimentary Body Contouring Consultation
                 </h2>
                 <p className="text-white/60">See if Accent Prime is right for you</p>
               </div>
@@ -166,7 +166,7 @@ export default function SkinTightening() {
                   type="submit"
                   className="w-full bg-magenta hover:bg-magenta-light text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-magenta/30 flex items-center justify-center gap-2 text-base"
                 >
-                  Book Free Consultation <ArrowRight className="w-5 h-5" />
+                  Book Your Consultation <ArrowRight className="w-5 h-5" />
                 </button>
                 <p className="text-center text-white/40 text-xs flex items-center justify-center gap-2">
                   <Shield className="w-3.5 h-3.5" />
@@ -310,7 +310,7 @@ export default function SkinTightening() {
             {[
               {
                 step: "1",
-                title: "Free Consultation",
+                title: "No-Obligation Consultation",
                 desc: "Meet with Dr. Lange to discuss your goals, assess your target areas, and create a personalized treatment plan.",
                 color: "bg-magenta/10 text-magenta",
               },
@@ -463,7 +463,7 @@ export default function SkinTightening() {
                 features: [
                   "1 Accent Prime session",
                   "Single treatment area",
-                  "Free consultation included",
+                  "Consultation included",
                   "InBody scan baseline",
                 ],
                 cta: "Book Consultation",
@@ -477,7 +477,7 @@ export default function SkinTightening() {
                 features: [
                   "4 Accent Prime sessions",
                   "1-2 treatment areas",
-                  "Free consultation + plan",
+                  "Consultation + plan included",
                   "InBody scans (before + after)",
                   "Progress photos at each visit",
                 ],
@@ -492,7 +492,7 @@ export default function SkinTightening() {
                 features: [
                   "6 Accent Prime sessions",
                   "Multiple treatment areas",
-                  "Free consultation + plan",
+                  "Consultation + plan included",
                   "InBody scans (before, mid, after)",
                   "Progress photos at each visit",
                   "Priority scheduling",
@@ -744,7 +744,7 @@ export default function SkinTightening() {
                 },
                 {
                   q: "How many sessions do I need?",
-                  a: "Most patients see optimal results with 4-6 sessions spaced 2 weeks apart. Dr. Lange will create a personalized plan based on your specific goals and the areas being treated during your free consultation.",
+                  a: "Most patients see optimal results with 4-6 sessions spaced 2 weeks apart. Dr. Lange will create a personalized plan based on your specific goals and the areas being treated during your consultation.",
                 },
                 {
                   q: "How long do results last?",
@@ -778,13 +778,13 @@ export default function SkinTightening() {
               Ready to Sculpt Your New Shape?
             </h2>
             <p className="text-white/70 text-lg mb-8">
-              Book your free consultation with Dr. Lange. See your options. No pressure, no obligation.
+              Book your consultation with Dr. Lange. See your options. No pressure, no obligation.
             </p>
             <Link
               href="/request-consultation"
               className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-10 py-4 rounded-full transition-all shadow-lg shadow-magenta/30 text-lg"
             >
-              Book My Free Consultation <ArrowRight className="w-5 h-5" />
+              Book My Consultation <ArrowRight className="w-5 h-5" />
             </Link>
             <p className="text-white/40 text-sm mt-5">
               Or call <a href="tel:3148877605" className="text-white/60 hover:text-white transition-colors">314-887-7605</a>

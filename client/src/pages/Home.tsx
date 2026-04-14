@@ -117,7 +117,7 @@ function HeroSection() {
           <div className="animate-text-reveal-delay-4 relative z-20">
             <div className="bg-[#0B1829]/80 backdrop-blur-xl rounded-3xl p-7 md:p-8 border border-white/[0.12] shadow-2xl shadow-black/40 animate-border-glow">
               <h3 className="text-xl font-bold text-white mb-1">See If You Qualify</h3>
-              <p className="text-white/50 text-sm mb-5">Free, no-obligation assessment</p>
+              <p className="text-white/50 text-sm mb-5">No-obligation assessment</p>
               <LeadForm variant="hero" className="!bg-transparent !backdrop-blur-none !border-0 !p-0 !shadow-none" />
             </div>
           </div>
@@ -176,10 +176,10 @@ function JourneySection() {
   const steps = [
     {
       num: "01",
-      title: "Free Consultation",
+      title: "No-Obligation Consultation",
       desc: "Meet with Dr. Lange to discuss your goals and verify your insurance at no cost.",
       href: "/request-consultation",
-      cta: "Book Free Consultation",
+      cta: "Book Your Consultation",
     },
     {
       num: "02",
@@ -510,7 +510,7 @@ function BMICalculatorSection() {
         <ScrollFadeIn className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-magenta/10 text-magenta font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
             <Calculator className="w-4 h-4" />
-            Free Tool
+            BMI Tool
           </div>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mt-2 mb-4">
             Check Your BMI
@@ -597,7 +597,7 @@ function BMICalculatorSection() {
                             className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-6 py-3 rounded-full transition-all text-sm shadow-md"
                             data-testid="link-bmi-schedule"
                           >
-                            Schedule Free Assessment <ArrowRight className="w-4 h-4" />
+                            Schedule Your Assessment <ArrowRight className="w-4 h-4" />
                           </Link>
                         )}
                         {!qual.qualifies && (
@@ -632,7 +632,7 @@ function QuizCTA() {
       <div className="max-w-4xl mx-auto px-4 relative text-center">
         <ScrollFadeIn>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Not Sure Which Option Is Right for You?</h2>
-          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Take our free 2-minute quiz to find out if you're a candidate for weight loss surgery, GLP-1 medication, or non-surgical options.</p>
+          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Take our 2-minute quiz to find out if you're a candidate for weight loss surgery, GLP-1 medication, or non-surgical options.</p>
           <Link href="/quiz" className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-10 py-4 rounded-full transition-all shadow-xl shadow-magenta/30 text-lg" data-testid="link-quiz-cta">
             Take the Quiz <ArrowRight className="w-5 h-5" />
           </Link>
@@ -931,7 +931,7 @@ function InsurancePricing() {
             <ul className="space-y-3 mb-8">
               {[
                 "All major insurance accepted",
-                "Free insurance verification",
+                "Complimentary insurance verification",
                 "CareCredit financing available",
                 "Plans as low as $300/month",
                 "No-obligation cost estimate",
@@ -992,7 +992,7 @@ function InsurancePricing() {
                 className="inline-flex items-center justify-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg shadow-magenta/30 text-sm uppercase tracking-wide w-full"
                 data-testid="link-free-insurance-check"
               >
-                Free Insurance Check <ArrowRight className="w-4 h-4" />
+                Complimentary Insurance Check <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </ScrollFadeIn>
@@ -1106,7 +1106,7 @@ function FinalCTA() {
             Ready to Start Your New Life?
           </h2>
           <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Schedule your free consultation with Dr. Lange today. Most insurance accepted.
+            Schedule your consultation with Dr. Lange today. Most insurance accepted.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -1161,9 +1161,9 @@ function ExitIntentPopup() {
             <HeartPulse className="w-8 h-8 text-magenta" />
           </div>
           <h3 className="font-serif text-2xl font-bold text-navy mb-2">Wait — Don't Leave Yet!</h3>
-          <p className="text-muted-foreground mb-6">Get a free insurance verification and find out if weight loss surgery is covered — in less than 5 minutes.</p>
+          <p className="text-muted-foreground mb-6">Get a complimentary insurance verification and find out if weight loss surgery is covered — in less than 5 minutes.</p>
           <Link href="/insurance" onClick={() => setDismissed(true)} className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg w-full justify-center text-base" data-testid="link-exit-intent-insurance">
-            Free Insurance Check <ArrowRight className="w-5 h-5" />
+            Complimentary Insurance Check <ArrowRight className="w-5 h-5" />
           </Link>
           <p className="text-xs text-muted-foreground mt-4">By providing your phone number, you consent to receive texts from New You Surgical Weight Loss. Msg & data rates apply. Reply STOP to opt out. HIPAA compliant.</p>
         </div>

@@ -43,7 +43,7 @@ function RedLightLeadForm() {
         <CheckCircle2 className="w-16 h-16 text-teal mx-auto mb-4" />
         <h3 className="text-xl font-bold text-navy mb-2">Request Received!</h3>
         <p className="text-muted-foreground">
-          Our team will contact you within 24 hours to schedule your free consultation.
+          Our team will contact you within 24 hours to schedule your no-obligation consultation.
         </p>
       </div>
     );
@@ -59,7 +59,7 @@ function RedLightLeadForm() {
       data-testid="form-redlight-lead"
     >
       <div>
-        <h3 className="font-serif text-xl font-bold text-navy mb-1">Book Your Free Consultation</h3>
+        <h3 className="font-serif text-xl font-bold text-navy mb-1">Book Your No-Obligation Consultation</h3>
         <p className="text-sm text-muted-foreground">
           Learn which package is right for your goals. No cost, no pressure.
         </p>
@@ -124,7 +124,7 @@ function RedLightLeadForm() {
         className="w-full bg-teal hover:bg-teal-light text-white font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl text-base"
         data-testid="button-rl-submit"
       >
-        Book Free Consultation <ArrowRight className="w-4 h-4" />
+        Book Your Consultation <ArrowRight className="w-4 h-4" />
       </button>
 
       <p className="text-xs text-center text-muted-foreground flex items-center justify-center gap-1.5">
@@ -260,7 +260,7 @@ export default function RedLightTherapy() {
             {[
               {
                 step: "1",
-                title: "Free Consultation",
+                title: "No-Obligation Consultation",
                 desc: "We assess your goals, discuss treatment areas, and recommend a package customized to your body and budget.",
                 color: "bg-teal/5",
                 accent: "text-teal",
@@ -484,7 +484,7 @@ export default function RedLightTherapy() {
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            Payment plans available. All packages include a free initial consultation. Can't decide? Book a free consultation and we'll help you choose.
+            Payment plans available. All packages include an initial no-obligation consultation. Can't decide? Book a no-obligation consultation and we'll help you choose.
           </p>
         </div>
       </section>
@@ -739,7 +739,7 @@ export default function RedLightTherapy() {
           <ScrollFadeIn>
             <h2 className="font-serif text-3xl font-bold text-navy mb-3">Choose Your Session Time</h2>
             <p className="text-muted-foreground mb-8">
-              Select a date and time for your free consultation or first session. In-person at our St. Louis office.
+              Select a date and time for your no-obligation consultation or first session. In-person at our St. Louis office.
             </p>
             <div className="bg-gray-50 rounded-2xl border shadow-sm p-10 text-muted-foreground text-sm">
               <div className="text-4xl mb-3">📅</div>
@@ -825,7 +825,7 @@ export default function RedLightTherapy() {
               {
                 icon: "🧬",
                 title: "ALMA TED Hair Restoration",
-                desc: "Weight loss can trigger hair shedding. If you're noticing thinning alongside your transformation, our needle-free ALMA TED treatment restores density. Free evaluation.",
+                desc: "Weight loss can trigger hair shedding. If you're noticing thinning alongside your transformation, our needle-free ALMA TED treatment restores density. Complimentary evaluation.",
                 href: "/hair-restoration",
                 label: "Learn More →",
               },
@@ -909,7 +909,7 @@ export default function RedLightTherapy() {
             <h2 className="font-serif text-4xl font-bold mb-4">Your Body Deserves to Catch Up</h2>
             <p className="font-serif text-2xl text-white/70 mb-4">With How Far You've Come.</p>
             <p className="text-white/70 text-lg mb-8">
-              You've already done the hard work. Let red light therapy help your outside match how you feel on the inside. Book your free consultation today.
+              You've already done the hard work. Let red light therapy help your outside match how you feel on the inside. Book your no-obligation consultation today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -917,7 +917,7 @@ export default function RedLightTherapy() {
                 className="inline-flex items-center gap-2 bg-white text-teal font-semibold px-8 py-4 rounded-xl transition-all shadow-xl text-lg hover:bg-white/90"
                 data-testid="btn-rl-final-cta"
               >
-                Book Free Consultation <ArrowRight className="w-5 h-5" />
+                Book Your Consultation <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:3148877605"

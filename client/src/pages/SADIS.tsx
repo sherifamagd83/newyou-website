@@ -133,7 +133,7 @@ export default function SADIS() {
           <ScrollFadeIn className="text-center mb-10">
             <h2 className="font-serif text-3xl font-bold text-navy mb-4">Is SADI-S Right for You?</h2>
             <p className="text-muted-foreground text-lg">
-              Dr. Lange will evaluate your BMI, health profile, and goals to determine if SADI-S is the optimal procedure for your transformation. Schedule a free consultation to find out.
+              Dr. Lange will evaluate your BMI, health profile, and goals to determine if SADI-S is the optimal procedure for your transformation. Schedule a no-obligation consultation to find out.
             </p>
           </ScrollFadeIn>
           <ScrollFadeIn>

@@ -15,14 +15,14 @@ export default function BookOnline() {
         image="/images/hero/hero-surgery.jpg"
         badge="Schedule Now"
         title="Book Your Appointment"
-        subtitle="Choose a time that works for you. Free consultations available for new patients."
+        subtitle="Choose a time that works for you. No-obligation consultations available for new patients."
       />
 
       {/* Trust strip */}
       <section className="py-6 bg-navy/5 border-b">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-navy font-medium">
-            <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-magenta" /> Free New Patient Consult</span>
+            <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-magenta" /> No-Obligation New Patient Consult</span>
             <span className="hidden sm:block text-gray-300">|</span>
             <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-teal" /> Same-Week Availability</span>
             <span className="hidden sm:block text-gray-300">|</span>

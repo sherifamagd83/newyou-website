@@ -69,11 +69,11 @@ export default function NonSurgical() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <ScrollFadeIn>
             <h2 className="font-serif text-3xl font-bold text-navy mb-4">Not Sure Which Option Is Right?</h2>
-            <p className="text-muted-foreground text-lg mb-8">Every patient's journey is unique. Schedule a free consultation with Dr. Lange to explore all your options — surgical and non-surgical.</p>
+            <p className="text-muted-foreground text-lg mb-8">Every patient's journey is unique. Schedule a consultation with Dr. Lange to explore all your options — surgical and non-surgical.</p>
             <Link href="/request-consultation"
               className="inline-flex items-center gap-2 bg-magenta hover:bg-magenta-light text-white font-semibold px-8 py-4 rounded-full transition-all shadow-lg text-lg"
               data-testid="link-nonsurgical-cta">
-              Schedule Free Consultation <ArrowRight className="w-5 h-5" />
+              Schedule Your Consultation <ArrowRight className="w-5 h-5" />
             </Link>
           </ScrollFadeIn>
         </div>

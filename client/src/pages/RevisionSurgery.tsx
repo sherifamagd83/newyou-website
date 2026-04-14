@@ -28,7 +28,7 @@ export default function RevisionSurgery() {
       {/* Hero */}
       <PageHero
         image="/images/hero/hero-surgery.jpg"
-        badge="Free Second Opinion"
+        badge="Complimentary Second Opinion"
         title="Had Weight Loss Surgery That Didn't Work?"
         subtitle="You're not alone. And it's not your fault. Dr. Lange specializes in revision and conversion surgery. Whether you had a lap band, sleeve, or bypass that didn't deliver — he can help."
       />
@@ -96,7 +96,7 @@ function SecondOpinionForm() {
             {/* Header */}
             <div className="bg-navy px-8 py-7">
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-1">
-                Request a Free Second Opinion
+                Request a Second Opinion
               </h2>
               <p className="text-white/75 text-sm">
                 Whether you had your original surgery with us or elsewhere.
@@ -112,7 +112,7 @@ function SecondOpinionForm() {
                     Request Received!
                   </h3>
                   <p className="text-muted-foreground">
-                    Dr. Lange's team will contact you within 24 hours to schedule your free second opinion.
+                    Dr. Lange's team will contact you within 24 hours to schedule your second opinion.
                   </p>
                 </div>
               ) : (
@@ -239,7 +239,7 @@ function SecondOpinionForm() {
             {/* Stats strip */}
             <div className="bg-navy/5 border-t px-8 py-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { val: "Free", label: "Second Opinion" },
+                { val: "Complimentary", label: "Second Opinion" },
                 { val: "24 hr", label: "Response Time" },
                 { val: "3", label: "Revision Approaches" },
                 { val: "No", label: "Referral Needed" },
@@ -402,7 +402,7 @@ function HowRevisionWorks() {
   const steps = [
     {
       num: "1",
-      title: "Free Second Opinion",
+      title: "Complimentary Second Opinion",
       desc: "Meet with Dr. Lange. Share your history. He evaluates your anatomy and identifies the root cause of the issue.",
     },
     {
@@ -481,7 +481,7 @@ function InsuranceSection() {
               Many Plans Cover Revision Surgery
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Insurance coverage for revision surgery depends on your plan and the medical necessity of the revision. Our insurance specialist verifies your benefits free of charge.
+              Insurance coverage for revision surgery depends on your plan and the medical necessity of the revision. Our insurance specialist verifies your benefits at no charge.
             </p>
           </div>
 
@@ -514,7 +514,7 @@ function InsuranceSection() {
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12">
             {[
-              { val: "Free", label: "Second Opinion Consultation" },
+              { val: "Complimentary", label: "Second Opinion Consultation" },
               { val: "3", label: "Revision Approaches" },
               { val: "8+ yrs", label: "Revision Experience" },
               { val: "Any", label: "Original Surgery Type" },
@@ -688,7 +688,7 @@ function RevisionFAQs() {
   const faqs = [
     {
       q: "Does insurance cover revision surgery?",
-      a: "Many plans cover revision when medically necessary. Requirements vary. Our insurance specialist verifies your benefits free of charge. Cash pay and CareCredit financing also available.",
+      a: "Many plans cover revision when medically necessary. Requirements vary. Our insurance specialist verifies your benefits at no charge. Cash pay and CareCredit financing also available.",
     },
     {
       q: "I had surgery at a different practice. Can I still come to you?",
@@ -782,7 +782,7 @@ function FullSupportSystem() {
       icon: Zap,
       title: "Hair Restoration",
       desc: "Weight loss after revision can trigger temporary shedding. ALMA TED restores density.",
-      detail: "Free evaluation",
+      detail: "Complimentary evaluation",
       href: "/hair-restoration",
     },
     {
@@ -838,7 +838,7 @@ function FullSupportSystem() {
               You Deserve a Second Chance.
             </h2>
             <p className="text-white/70 mb-8 max-w-xl mx-auto">
-              Free second opinion with Dr. Lange. No referral needed. No judgment. Just a plan that works this time.
+              Complimentary second opinion with Dr. Lange. No referral needed. No judgment. Just a plan that works this time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
